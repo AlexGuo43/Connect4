@@ -11,12 +11,18 @@ Start will be KEY[1] and Resetn will be KEY[0]
 module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, output [9:0] LEDR);
 
     //game board and counters
+    wire start, Resetn;
+
+    assign start = KEY[1];
+    assign Resetn = KEY[0];
     parameter empty = 2'b00, p1 = 2'b01, p2 = 2'b10;
     reg [1:0] board [0:41];
     integer i;
-    initial begin
-        for (i = 0; i < 42; i = i + 1) begin
-            board[i] = empty;
+    always @(posedge CLOCK_50 or negedge Resetn) begin
+        if (!Resetn) begin
+            for (i = 0; i < 42; i = i + 1) begin
+                board[i] <= empty;
+            end
         end
     end
     
@@ -31,10 +37,6 @@ module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, output [9:0] LEDR)
     //Setting up HSecEn
     wire [25:0] Q;
     wire HSecEn;
-    wire start, Resetn;
-
-    assign start = KEY[1];
-    assign Resetn = KEY[0];
 
     register_26bit enabler(CLOCK_50, Resetn, Q);
     assign HSecEn = ~(|Q[25:0]);
@@ -43,9 +45,11 @@ module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, output [9:0] LEDR)
     wire right, left, place;
     reg win = 0;
     reg validMove1, validMove2;
-    initial begin
-        validMove1=0;
-        validMove2=0;
+    always @(posedge CLOCK_50 or negedge Resetn) begin
+        if(!Resetn) begin
+            validMove1=0;
+            validMove2=0;
+        end
     end
     assign LEDR[5] = validMove2;
     assign LEDR[4] = validMove1;
@@ -60,15 +64,17 @@ module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, output [9:0] LEDR)
 
     // Counter_currCol module
     wire [2:0] currCol;
-    Counter_currCol U2(shiftR, shiftL, HSecEn, currCol[2:0]); //Clocked by HSecEn to stop going right too quickly
+    Counter_currCol U2(shiftR, shiftL, HSecEn, CLOCK_50, Resetn, currCol[2:0]); //Clocked by HSecEn to stop going right too quickly
     //assign LEDR[9:7] = currCol;
 
     // Counter_colCount module -- full code since you can't pass multi-dimensional arrays...
     // Also handles all actions of place command, (actions only happen once signalled by checkwin1/2)
     reg [2:0] colCount [0:6]; //track number of pieces in each col
-    initial begin
-        for (i = 0; i < 7; i = i + 1) begin
-            colCount[i] = 3'b000;
+    always @(posedge CLOCK_50 or negedge Resetn) begin
+        if(!Resetn) begin
+            for (i = 0; i < 7; i = i + 1) begin
+                colCount[i] = 3'b000;
+            end
         end
     end
     assign LEDR[9:7] = colCount[3];
@@ -107,9 +113,11 @@ module register_26bit(Clock, Resetn, Q);
                 Q <= Q + 1;
 endmodule
 
-module Counter_currCol(input shiftR, shiftL, HSecEn, output reg [2:0] currCol);
-    initial begin
-        currCol = 3'b011;  // start in middle col
+module Counter_currCol(input shiftR, shiftL, HSecEn, clock, Resetn, output reg [2:0] currCol);
+    always @(posedge clock or negedge Resetn) begin
+        if(!Resetn) begin
+            currCol = 3'b011;  // start in middle col
+        end
     end
     always @(posedge HSecEn)
         if(shiftR&&currCol<3'b111) currCol<=currCol+1; //HSecEn to stop it from going right too fast

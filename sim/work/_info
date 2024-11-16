@@ -9,21 +9,21 @@ z2
 cModel Technology
 Z0 dC:/Users/Alex/Desktop/labs/Connect4/sim
 vCounter_currCol
-Z1 !s110 1731289511
+Z1 !s110 1731336700
 !i10b 1
-!s100 g7BR2ghhb=YHJ;LaL>c4J0
-I3XU;^NYG<Ue8_=6RMno112
+!s100 CkNRZae=DCAWMK]9d?BfT2
+I<nZn5=S?kAa3XgcAFTbaX0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1731289504
+Z3 w1731336698
 Z4 8../part1.v
 Z5 F../part1.v
-L0 110
+L0 116
 Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1731289510.000000
+Z7 !s108 1731336700.000000
 Z8 !s107 ../top.v|../part1.v|
 Z9 !s90 ../part1.v|../top.v|
 !i113 1
@@ -32,14 +32,14 @@ n@counter_curr@col
 vFSM
 R1
 !i10b 1
-!s100 DE;ZI>=c<d7;S3GILF_1N2
-ITO5V4_o9giUZKDNTUkGTd1
+!s100 CnFBlEmIm4`5hl1B4<[kF2
+I=<L<TIXJFWFChGTGV?[Pn2
 R2
 R0
 R3
 R4
 R5
-L0 119
+L0 127
 R6
 r1
 !s85 0
@@ -53,8 +53,8 @@ n@f@s@m
 vpart1
 R1
 !i10b 1
-!s100 KXE]P0Ra<n^9c0N]dcj<A1
-I`QF?WIG3c^A6neMHfhT3o0
+!s100 3EGXBzoShF[;]AMeBa0UW0
+I?aROEhWG]X=4P71KVCWJC0
 R2
 R0
 R3
@@ -73,14 +73,14 @@ R10
 vregister_26bit
 R1
 !i10b 1
-!s100 48PV=K086R?jO_1;_X8[53
-IZDT2Dz5C^SS44E[a@BMVO2
+!s100 5:V1ilSn_l956I2lC>BQ<2
+IXllWmiXa^Ogb5RRZc5Hb01
 R2
 R0
 R3
 R4
 R5
-L0 96
+L0 102
 R6
 r1
 !s85 0
@@ -91,7 +91,7 @@ R9
 !i113 1
 R10
 vtb
-!s110 1731289510
+R1
 !i10b 1
 !s100 `dSK8GlbH7CnN:WKZA=I60
 I7TUGeW80<Ue3`LOTCFdN13
