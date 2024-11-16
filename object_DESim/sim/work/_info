@@ -1,0 +1,190 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/jacky/Desktop/object_DESim/sim
+vcount
+Z1 !s110 1731740919
+!i10b 1
+!s100 5zM;EEOD]0z@Hailh1aLH0
+I6Goo<???]zKdaC?VSaZc03
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1731740197
+Z4 8../vga_demo.v
+Z5 F../vga_demo.v
+L0 91
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1731740919.000000
+Z8 !s107 ../vga_demo.v|../top.v|../object_mem2.v|../object_mem1.v|../object_mem.v|
+Z9 !s90 ../object_mem.v|../object_mem1.v|../object_mem2.v|../top.v|../vga_demo.v|
+!i113 1
+Z10 tCvgOpt 0
+vhex7seg
+R1
+!i10b 1
+!s100 7i9cQj?ERDdJ1Ang:0YEY1
+IhMzE5mcAzRF3hNZiemDcZ3
+R2
+R0
+R3
+R4
+R5
+L0 104
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vobject_mem
+R1
+!i10b 1
+!s100 l@kkiE;niU_1^gn8UGU[U0
+IPCbi[>?27T`UC4A4[VmE@2
+R2
+R0
+w1731737995
+8../object_mem.v
+F../object_mem.v
+Z11 L0 39
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vobject_mem1
+R1
+!i10b 1
+!s100 lN6KUIh0mW1GlLIRV[64B0
+I;PlIoMP3CHO:;WV[iO6<I0
+R2
+R0
+w1731738445
+8../object_mem1.v
+F../object_mem1.v
+R11
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vobject_mem2
+R1
+!i10b 1
+!s100 OJB;<]z:cR3EA^H;`RDZ>0
+IgCoJ7NEQ0hMNQHTnBNBCb1
+R2
+R0
+w1731738525
+8../object_mem2.v
+F../object_mem2.v
+R11
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vregn
+R1
+!i10b 1
+!s100 9=WEAHQD?j`Q>fRIY8NO23
+I<8hnKk?elEOz<9oQ6flJH2
+R2
+R0
+R3
+R4
+R5
+L0 77
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vtb
+!s110 1731740918
+!i10b 1
+!s100 Go]CW3?L8<4?h5=kD34Gc0
+IE2m;PWd7O8Lo07VX;^<IC1
+R2
+R0
+w1731737996
+8../tb/tb.v
+F../tb/tb.v
+L0 6
+R6
+r1
+!s85 0
+31
+!s108 1731740918.000000
+!s107 ../tb/tb.v|
+!s90 ../tb/tb.v|
+!i113 1
+R10
+vtop
+R1
+!i10b 1
+!s100 QC>ibHPVBC@C?=loaZgYM0
+IP<9]=mjYdGN;ZoT7>GSU71
+R2
+R0
+w1731740396
+8../top.v
+F../top.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vvga_demo
+R1
+!i10b 1
+!s100 9;J0@JO?XSoV?UbIe=iF]1
+Im8Pa:QKBe;NYN5gLS=m_80
+R2
+R0
+R3
+R4
+R5
+L0 9
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
