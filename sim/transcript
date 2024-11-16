@@ -1,11 +1,24 @@
 # vsim -pli "simfpga.vpi" -Lf 220model -Lf altera_mf_ver -Lf verilog -c -do "run -all" tb 
-# Start time: 09:51:44 on Nov 11,2024
+# Start time: 00:03:01 on Nov 16,2024
 # Loading work.tb
 # Loading work.top
+# Loading work.PS2_Controller
+# Loading work.Altera_UP_PS2_Data_In
+# Loading work.Altera_UP_PS2_Command_Out
 # Loading work.part1
 # Loading work.register_26bit
 # Loading work.FSM
 # Loading work.Counter_currCol
+# ** Warning: (vsim-3017) ../tb/tb.v(49): [TFMPC] - Too few port connections. Expected 12, found 10.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/DUT File: ../top.v
+# ** Warning: (vsim-3722) ../tb/tb.v(49): [TFMPC] - Missing connection for port 'PS2_CLK'.
+# ** Warning: (vsim-3722) ../tb/tb.v(49): [TFMPC] - Missing connection for port 'PS2_DAT'.
+# ** Warning: (vsim-3017) ../top.v(22): [TFMPC] - Too few port connections. Expected 10, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/DUT/ps2 File: ../PS2_Controller.v
+# ** Warning: (vsim-3722) ../top.v(22): [TFMPC] - Missing connection for port 'the_command'.
+# ** Warning: (vsim-3722) ../top.v(22): [TFMPC] - Missing connection for port 'send_command'.
+# ** Warning: (vsim-3722) ../top.v(22): [TFMPC] - Missing connection for port 'command_was_sent'.
+# ** Warning: (vsim-3722) ../top.v(22): [TFMPC] - Missing connection for port 'error_communication_timed_out'.
 # Loading ./simfpga.vpi
 # run -all
 # Time scaling: 0.0001 sim seconds per real-time second
@@ -13,8 +26,8 @@
 # 
 # Connected to server!
 # ** Note: $finish    : ../tb/tb.v(27)
-#    Time: 158970 us  Iteration: 1  Instance: /tb
+#    Time: 156945 us  Iteration: 1  Instance: /tb
 # 
 # Quitting...
-# End time: 09:52:19 on Nov 11,2024, Elapsed time: 0:00:35
-# Errors: 0, Warnings: 0
+# End time: 00:04:04 on Nov 16,2024, Elapsed time: 0:01:03
+# Errors: 0, Warnings: 8

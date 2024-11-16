@@ -8,88 +8,151 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/Alex/Desktop/labs/Connect4/sim
-vCounter_currCol
-Z1 !s110 1731336700
+vAltera_UP_PS2_Command_Out
+Z1 !s110 1731733380
 !i10b 1
-!s100 CkNRZae=DCAWMK]9d?BfT2
-I<nZn5=S?kAa3XgcAFTbaX0
+!s100 ZjDIV:z^W4aE7ECD]ReVK0
+IU]h3@CJD>0jRZPEfYKgI33
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1731336698
-Z4 8../part1.v
-Z5 F../part1.v
-L0 116
-Z6 OV;L;10.5b;63
+Z3 w1731726696
+8../Altera_UP_PS2_Command_Out.v
+F../Altera_UP_PS2_Command_Out.v
+Z4 L0 10
+Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1731336700.000000
-Z8 !s107 ../top.v|../part1.v|
-Z9 !s90 ../part1.v|../top.v|
+Z6 !s108 1731733380.000000
+Z7 !s107 ../top.v|../PS2_Controller.v|../part1.v|../Altera_UP_PS2_Data_In.v|../Altera_UP_PS2_Command_Out.v|
+Z8 !s90 ../Altera_UP_PS2_Command_Out.v|../Altera_UP_PS2_Data_In.v|../part1.v|../PS2_Controller.v|../top.v|
 !i113 1
-Z10 tCvgOpt 0
+Z9 tCvgOpt 0
+n@altera_@u@p_@p@s2_@command_@out
+vAltera_UP_PS2_Data_In
+R1
+!i10b 1
+!s100 ee^TmQcGZ[E_>UMojW[Zg0
+Iz]dZ6=8YWGzhO3=k2Uk?B0
+R2
+R0
+R3
+8../Altera_UP_PS2_Data_In.v
+F../Altera_UP_PS2_Data_In.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9
+n@altera_@u@p_@p@s2_@data_@in
+vCounter_currCol
+R1
+!i10b 1
+!s100 =DZL>12mh3B`RK68O[mjR1
+Ii5NQ?ch8VEIaGQ`aF0Ac52
+R2
+R0
+Z10 w1731731106
+Z11 8../part1.v
+Z12 F../part1.v
+L0 135
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9
 n@counter_curr@col
 vFSM
 R1
 !i10b 1
-!s100 CnFBlEmIm4`5hl1B4<[kF2
-I=<L<TIXJFWFChGTGV?[Pn2
+!s100 g:LfU5f62L<nngN0J963F3
+ImULQ_l>e7]zVZRY:>UfN43
 R2
 R0
-R3
-R4
+R10
+R11
+R12
+L0 146
 R5
-L0 127
-R6
 r1
 !s85 0
 31
+R6
 R7
 R8
-R9
 !i113 1
-R10
+R9
 n@f@s@m
 vpart1
 R1
 !i10b 1
-!s100 3EGXBzoShF[;]AMeBa0UW0
-I?aROEhWG]X=4P71KVCWJC0
+!s100 EXDDSPAB4<XWiD_oMU;nh0
+IX^RHoPIO5jo]O2?jL]iP]0
 R2
 R0
-R3
-R4
-R5
+R10
+R11
+R12
 L0 11
-R6
+R5
 r1
 !s85 0
 31
+R6
 R7
 R8
-R9
 !i113 1
-R10
+R9
+vPS2_Controller
+R1
+!i10b 1
+!s100 gdY5OiIPoUjd4MVeA^Hj`1
+IA2bkA4IY=Idefm@BD3Q;>3
+R2
+R0
+w1731733350
+8../PS2_Controller.v
+F../PS2_Controller.v
+L0 9
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9
+n@p@s2_@controller
 vregister_26bit
 R1
 !i10b 1
-!s100 5:V1ilSn_l956I2lC>BQ<2
-IXllWmiXa^Ogb5RRZc5Hb01
+!s100 eU`Ahj=VzTc?b2N[5GFhc3
+IX]>UWKObTzQ]cX@Un^AJS3
 R2
 R0
-R3
-R4
+R10
+R11
+R12
+L0 121
 R5
-L0 102
-R6
 r1
 !s85 0
 31
+R6
 R7
 R8
-R9
 !i113 1
-R10
+R9
 vtb
 R1
 !i10b 1
@@ -101,32 +164,32 @@ w1610675072
 8../tb/tb.v
 F../tb/tb.v
 L0 9
-R6
+R5
 r1
 !s85 0
 31
-R7
+R6
 !s107 ../tb/tb.v|
 !s90 ../tb/tb.v|
 !i113 1
-R10
+R9
 vtop
 R1
 !i10b 1
-!s100 3fbffD:mL3bm4lo:Z_=G00
-IR?g:c9]2k^[e9Oj0H4Nl60
+!s100 MX=NajM9J4m=^C=8^k5;L2
+IInigRio3TFlPK4cI@jH2E2
 R2
 R0
-w1731203111
+w1731730559
 8../top.v
 F../top.v
 L0 4
-R6
+R5
 r1
 !s85 0
 31
+R6
 R7
 R8
-R9
 !i113 1
-R10
+R9

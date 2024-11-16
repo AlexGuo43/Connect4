@@ -8,7 +8,7 @@ say Player 1's turn, and LEDR[1] will say it's Player 2's turn.
 Start will be KEY[1] and Resetn will be KEY[0]
 */
 
-module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, output [9:0] LEDR);
+module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, input [7:0] received_data, input received_data_en, output [9:0] LEDR);
 
     //game board and counters
     wire start, Resetn;
@@ -42,7 +42,26 @@ module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, output [9:0] LEDR)
     assign HSecEn = ~(|Q[25:0]);
 
     //Setting up game logic FSM
-    wire right, left, place;
+    // wire right, left, place; //for no ps2 keyboard
+    reg right, left, place;
+    always @(posedge CLOCK_50 or negedge Resetn) begin
+        if (!Resetn) begin
+            right <= 0;
+            left <= 0;
+            place <= 0;
+        end else if (received_data_en) begin
+            case (received_data)
+                8'h23: right <= 1;  // D key
+                8'h1C: left <= 1;   // A key
+                8'h29: place <= 1;  // Spacebar
+                default: begin
+                    right <= 0;
+                    left <= 0;
+                    place <= 0;
+                end
+            endcase
+        end
+    end
     reg win = 0;
     reg validMove1, validMove2;
     always @(posedge CLOCK_50 or negedge Resetn) begin
@@ -53,9 +72,9 @@ module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, output [9:0] LEDR)
     end
     assign LEDR[5] = validMove2;
     assign LEDR[4] = validMove1;
-    assign right = SW[0];
-    assign left = SW[1];
-    assign place = SW[2];
+    // assign right = SW[0]; //for no ps2 keyboard
+    // assign left = SW[1];
+    // assign place = SW[2];
     wire shiftR, shiftL, P1_turn, P2_turn, checkwin1, checkwin2;
     FSM U1(start, Resetn, right, left, place, win, CLOCK_50, validMove1, validMove2, shiftR, shiftL, P1_turn, P2_turn, checkwin1, checkwin2);
 
@@ -65,7 +84,7 @@ module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, output [9:0] LEDR)
     // Counter_currCol module
     wire [2:0] currCol;
     Counter_currCol U2(shiftR, shiftL, HSecEn, CLOCK_50, Resetn, currCol[2:0]); //Clocked by HSecEn to stop going right too quickly
-    //assign LEDR[9:7] = currCol;
+    assign LEDR[9:7] = currCol;
 
     // Counter_colCount module -- full code since you can't pass multi-dimensional arrays...
     // Also handles all actions of place command, (actions only happen once signalled by checkwin1/2)
@@ -77,7 +96,7 @@ module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, output [9:0] LEDR)
             end
         end
     end
-    assign LEDR[9:7] = colCount[3];
+    // assign LEDR[9:7] = colCount[3];
     always @(posedge CLOCK_50)
         if(checkwin1 && colCount[currCol]<3'b110) begin
             validMove1<=1;
