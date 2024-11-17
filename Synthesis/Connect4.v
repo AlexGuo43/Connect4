@@ -70,8 +70,24 @@ module Connect4(
 //  REG/WIRE declarations
 //=======================================================
 
-wire [7:0] received_data;       // Data from PS/2 keyboard
-wire received_data_en;          // Data valid signal
+// Internal Wires
+wire		[7:0]	ps2_key_data;
+wire				ps2_key_pressed;
+
+// Internal Registers
+reg			[7:0]	last_data_received;
+
+/*****************************************************************************
+ *                             Sequential Logic                              *
+ *****************************************************************************/
+
+always @(posedge CLOCK_50)
+begin
+	if (KEY[0] == 1'b0)
+		last_data_received <= 8'h00;
+	else if (ps2_key_pressed == 1'b1)
+		last_data_received <= ps2_key_data;
+end
 
 
 //=======================================================
@@ -82,10 +98,11 @@ PS2_Controller ps2 (
         .reset(~KEY[0]),           // Active-high reset
         .PS2_CLK(PS2_CLK),         // PS/2 Clock line
         .PS2_DAT(PS2_DAT),         // PS/2 Data line
-        .received_data(received_data[7:0]),
-        .received_data_en(received_data_en)
+		  // Outputs
+		  .received_data		(ps2_key_data),
+		  .received_data_en	(ps2_key_pressed)
 );
-part1 U1 (SW[2:0], CLOCK_50, KEY[1:0], received_data[7:0], received_data_en, LEDR);
+part1 U1 (SW[2:0], CLOCK_50, KEY[1:0], last_data_received[7:0], ps2_key_pressed, LEDR);
 
 
 

@@ -1,2 +1,2 @@
-Warning (10268): Verilog HDL information at part1.v(82): always construct contains both blocking and non-blocking assignments File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 82
-Info (10281): Verilog HDL Declaration information at part1.v(142): object "y" differs only in case from object "Y" in the same scope File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 142
+Warning (10268): Verilog HDL information at part1.v(87): always construct contains both blocking and non-blocking assignments File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 87
+Info (10281): Verilog HDL Declaration information at part1.v(147): object "y" differs only in case from object "Y" in the same scope File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 147

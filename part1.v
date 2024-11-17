@@ -54,6 +54,11 @@ module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, input [7:0] receiv
                 end
             endcase
         end
+        else begin // if key is not pressed, make sure it falls back to 0
+            right <= 0;
+            left <= 0;
+            place <= 0;
+        end
     end
     reg win = 0;
     reg validMove1, validMove2;
@@ -72,13 +77,13 @@ module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, input [7:0] receiv
     // Counter_currCol module
     wire [2:0] currCol;
     Counter_currCol U2(shiftR, shiftL, HSecEn, CLOCK_50, Resetn, currCol[2:0]); //Clocked by HSecEn to stop going right too quickly
-    assign LEDR[9:7] = currCol;
+    // assign LEDR[9:7] = currCol;
 
     // Counter_colCount module -- full code since you can't pass multi-dimensional arrays...
     // Also handles all actions of place command, (actions only happen once signalled by checkwin1/2)
     reg [2:0] colCount [0:6]; //track number of pieces in each col
 
-    // assign LEDR[9:7] = colCount[3];
+    assign LEDR[9:7] = colCount[3];
     always @(posedge CLOCK_50 or negedge Resetn) begin
         if(!Resetn) begin // initialize all elements of the board
             for (i = 0; i < 42; i = i + 1) begin

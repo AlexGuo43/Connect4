@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Connect4
-Sat Nov 16 18:41:32 2024
+Sat Nov 16 23:27:31 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -57,13 +57,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Nov 16 18:41:32 2024          ;
+; Analysis & Synthesis Status     ; Successful - Sat Nov 16 23:27:31 2024          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; Connect4                                       ;
 ; Top-level Entity Name           ; Connect4                                       ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 149                                            ;
+; Total registers                 ; 157                                            ;
 ; Total pins                      ; 146                                            ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
@@ -201,23 +201,23 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Estimate of Logic utilization (ALMs needed) ; 122            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 196            ;
+; Combinational ALUT usage for logic          ; 195            ;
 ;     -- 7 input functions                    ; 0              ;
 ;     -- 6 input functions                    ; 43             ;
-;     -- 5 input functions                    ; 25             ;
-;     -- 4 input functions                    ; 25             ;
-;     -- <=3 input functions                  ; 103            ;
+;     -- 5 input functions                    ; 27             ;
+;     -- 4 input functions                    ; 23             ;
+;     -- <=3 input functions                  ; 102            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 149            ;
+; Dedicated logic registers                   ; 157            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 146            ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 149            ;
-; Total fan-out                               ; 1406           ;
-; Average fan-out                             ; 2.14           ;
+; Maximum fan-out                             ; 157            ;
+; Total fan-out                               ; 1433           ;
+; Average fan-out                             ; 2.16           ;
 +---------------------------------------------+----------------+
 
 
@@ -226,11 +226,11 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------+---------------------------+--------------+
 ; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                    ; Entity Name               ; Library Name ;
 +---------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------+---------------------------+--------------+
-; |Connect4                                         ; 196 (0)             ; 149 (0)                   ; 0                 ; 0          ; 146  ; 0            ; |Connect4                                                              ; Connect4                  ; work         ;
+; |Connect4                                         ; 195 (1)             ; 157 (8)                   ; 0                 ; 0          ; 146  ; 0            ; |Connect4                                                              ; Connect4                  ; work         ;
 ;    |PS2_Controller:ps2|                           ; 106 (6)             ; 90 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |Connect4|PS2_Controller:ps2                                           ; PS2_Controller            ; work         ;
 ;       |Altera_UP_PS2_Command_Out:PS2_Command_Out| ; 86 (86)             ; 60 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out ; Altera_UP_PS2_Command_Out ; work         ;
 ;       |Altera_UP_PS2_Data_In:PS2_Data_In|         ; 14 (14)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In         ; Altera_UP_PS2_Data_In     ; work         ;
-;    |part1:U1|                                     ; 90 (31)             ; 59 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |Connect4|part1:U1                                                     ; part1                     ; work         ;
+;    |part1:U1|                                     ; 88 (29)             ; 59 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |Connect4|part1:U1                                                     ; part1                     ; work         ;
 ;       |Counter_currCol:U2|                        ; 11 (11)             ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |Connect4|part1:U1|Counter_currCol:U2                                  ; Counter_currCol           ; work         ;
 ;       |FSM:U1|                                    ; 15 (15)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Connect4|part1:U1|FSM:U1                                              ; FSM                       ; work         ;
 ;       |register_26bit:enabler|                    ; 33 (33)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |Connect4|part1:U1|register_26bit:enabler                              ; register_26bit            ; work         ;
@@ -332,12 +332,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 149   ;
-; Number of registers using Synchronous Clear  ; 106   ;
+; Total registers                              ; 157   ;
+; Number of registers using Synchronous Clear  ; 114   ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 29    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 98    ;
+; Number of registers using Clock Enable       ; 103   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -347,8 +347,8 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; part1:U1|Counter_currCol:U2|currCol[0] ; 16      ;
-; part1:U1|Counter_currCol:U2|currCol[1] ; 17      ;
+; part1:U1|Counter_currCol:U2|currCol[0] ; 15      ;
+; part1:U1|Counter_currCol:U2|currCol[1] ; 16      ;
 ; Total number of inverted registers = 2 ;         ;
 +----------------------------------------+---------+
 
@@ -358,18 +358,19 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[3]                    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[7]                   ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[6][1]                                                                  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[5][2]                                                                  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[2]                    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Connect4|last_data_received[0]                                                                    ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[6][2]                                                                  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[5][1]                                                                  ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[4][2]                                                                  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[3][0]                                                                  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[2][1]                                                                  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[3][1]                                                                  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[2][2]                                                                  ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[1][1]                                                                  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[0][2]                                                                  ;
-; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |Connect4|part1:U1|register_26bit:enabler|Q[23]                                                    ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[4] ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[10]         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[0][1]                                                                  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[6]                   ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |Connect4|part1:U1|register_26bit:enabler|Q[2]                                                     ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[5] ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[4]          ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[0]                  ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[3]                       ;
 ; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[8]         ;
@@ -472,29 +473,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 149                         ;
-;     CLR               ; 5                           ;
+; arriav_ff             ; 157                         ;
+;     CLR               ; 8                           ;
 ;     ENA               ; 8                           ;
-;     ENA CLR           ; 24                          ;
-;     ENA SCLR          ; 66                          ;
+;     ENA CLR           ; 21                          ;
+;     ENA SCLR          ; 74                          ;
 ;     SCLR              ; 40                          ;
 ;     plain             ; 6                           ;
 ; arriav_io_obuf        ; 20                          ;
-; arriav_lcell_comb     ; 199                         ;
+; arriav_lcell_comb     ; 196                         ;
 ;     arith             ; 76                          ;
 ;         1 data inputs ; 76                          ;
-;     normal            ; 123                         ;
+;     normal            ; 120                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 16                          ;
-;         4 data inputs ; 25                          ;
-;         5 data inputs ; 25                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 14                          ;
+;         4 data inputs ; 23                          ;
+;         5 data inputs ; 27                          ;
 ;         6 data inputs ; 43                          ;
 ; boundary_port         ; 146                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.50                        ;
-; Average LUT depth     ; 2.24                        ;
+; Average LUT depth     ; 2.20                        ;
 +-----------------------+-----------------------------+
 
 
@@ -513,15 +514,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Sat Nov 16 18:41:23 2024
+    Info: Processing started: Sat Nov 16 23:27:12 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Connect4 -c Connect4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 4 design units, including 4 entities, in source file /users/alex/desktop/labs/connect4/part1.v
     Info (12023): Found entity 1: part1 File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 11
-    Info (12023): Found entity 2: register_26bit File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 114
-    Info (12023): Found entity 3: Counter_currCol File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 128
-    Info (12023): Found entity 4: FSM File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 141
+    Info (12023): Found entity 2: register_26bit File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 119
+    Info (12023): Found entity 3: Counter_currCol File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 133
+    Info (12023): Found entity 4: FSM File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 146
 Info (12021): Found 1 design units, including 1 entities, in source file /users/alex/desktop/labs/connect4/altera_up_ps2_data_in.v
     Info (12023): Found entity 1: Altera_UP_PS2_Data_In File: C:/Users/Alex/Desktop/labs/Connect4/Altera_UP_PS2_Data_In.v Line: 10
 Info (12021): Found 1 design units, including 1 entities, in source file /users/alex/desktop/labs/connect4/altera_up_ps2_command_out.v
@@ -558,22 +559,22 @@ Warning (10034): Output port "VGA_CLK" at connect4.v(59) has no driver File: C:/
 Warning (10034): Output port "VGA_HS" at connect4.v(61) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 61
 Warning (10034): Output port "VGA_SYNC_N" at connect4.v(63) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 63
 Warning (10034): Output port "VGA_VS" at connect4.v(65) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 65
-Info (12128): Elaborating entity "PS2_Controller" for hierarchy "PS2_Controller:ps2" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 87
+Info (12128): Elaborating entity "PS2_Controller" for hierarchy "PS2_Controller:ps2" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 104
 Info (12128): Elaborating entity "Altera_UP_PS2_Data_In" for hierarchy "PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In" File: C:/Users/Alex/Desktop/labs/Connect4/PS2_Controller.v Line: 247
 Info (12128): Elaborating entity "Altera_UP_PS2_Command_Out" for hierarchy "PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out" File: C:/Users/Alex/Desktop/labs/Connect4/PS2_Controller.v Line: 267
-Info (12128): Elaborating entity "part1" for hierarchy "part1:U1" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 88
+Info (12128): Elaborating entity "part1" for hierarchy "part1:U1" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 105
 Warning (10036): Verilog HDL or VHDL warning at part1.v(19): object "board" assigned a value but never read File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 19
-Warning (10230): Verilog HDL assignment warning at part1.v(96): truncated value with size 32 to match size of target (3) File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 96
 Warning (10230): Verilog HDL assignment warning at part1.v(101): truncated value with size 32 to match size of target (3) File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 101
-Warning (10240): Verilog HDL Always Construct warning at part1.v(82): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 82
+Warning (10230): Verilog HDL assignment warning at part1.v(106): truncated value with size 32 to match size of target (3) File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 106
+Warning (10240): Verilog HDL Always Construct warning at part1.v(87): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 87
 Warning (10034): Output port "LEDR[6]" at part1.v(11) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 11
 Warning (10034): Output port "LEDR[3..2]" at part1.v(11) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 11
 Info (12128): Elaborating entity "register_26bit" for hierarchy "part1:U1|register_26bit:enabler" File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 34
-Warning (10230): Verilog HDL assignment warning at part1.v(125): truncated value with size 32 to match size of target (26) File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 125
-Info (12128): Elaborating entity "FSM" for hierarchy "part1:U1|FSM:U1" File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 67
-Info (12128): Elaborating entity "Counter_currCol" for hierarchy "part1:U1|Counter_currCol:U2" File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 74
-Warning (10230): Verilog HDL assignment warning at part1.v(134): truncated value with size 32 to match size of target (3) File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 134
-Warning (10230): Verilog HDL assignment warning at part1.v(136): truncated value with size 32 to match size of target (3) File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 136
+Warning (10230): Verilog HDL assignment warning at part1.v(130): truncated value with size 32 to match size of target (26) File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 130
+Info (12128): Elaborating entity "FSM" for hierarchy "part1:U1|FSM:U1" File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 72
+Info (12128): Elaborating entity "Counter_currCol" for hierarchy "part1:U1|Counter_currCol:U2" File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 79
+Warning (10230): Verilog HDL assignment warning at part1.v(139): truncated value with size 32 to match size of target (3) File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 139
+Warning (10230): Verilog HDL assignment warning at part1.v(141): truncated value with size 32 to match size of target (3) File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 141
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 27
@@ -717,16 +718,16 @@ Warning (21074): Design contains 16 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 54
     Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 54
     Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 54
-Info (21057): Implemented 380 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 387 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 107 output pins
     Info (21060): Implemented 20 bidirectional pins
-    Info (21061): Implemented 234 logic cells
+    Info (21061): Implemented 241 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 176 warnings
-    Info: Peak virtual memory: 4852 megabytes
-    Info: Processing ended: Sat Nov 16 18:41:32 2024
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 4855 megabytes
+    Info: Processing ended: Sat Nov 16 23:27:31 2024
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +------------------------------------------+
