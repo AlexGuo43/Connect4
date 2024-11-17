@@ -18,13 +18,6 @@ module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, input [7:0] receiv
     parameter empty = 2'b00, p1 = 2'b01, p2 = 2'b10;
     reg [1:0] board [0:41];
     integer i;
-    always @(posedge CLOCK_50 or negedge Resetn) begin
-        if (!Resetn) begin
-            for (i = 0; i < 42; i = i + 1) begin
-                board[i] <= empty;
-            end
-        end
-    end
     
     // always @(posedge clk) begin
     // if (player_move) begin
@@ -64,12 +57,7 @@ module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, input [7:0] receiv
     end
     reg win = 0;
     reg validMove1, validMove2;
-    always @(posedge CLOCK_50 or negedge Resetn) begin
-        if(!Resetn) begin
-            validMove1=0;
-            validMove2=0;
-        end
-    end
+
     assign LEDR[5] = validMove2;
     assign LEDR[4] = validMove1;
     // assign right = SW[0]; //for no ps2 keyboard
@@ -89,16 +77,20 @@ module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, input [7:0] receiv
     // Counter_colCount module -- full code since you can't pass multi-dimensional arrays...
     // Also handles all actions of place command, (actions only happen once signalled by checkwin1/2)
     reg [2:0] colCount [0:6]; //track number of pieces in each col
+
+    // assign LEDR[9:7] = colCount[3];
     always @(posedge CLOCK_50 or negedge Resetn) begin
-        if(!Resetn) begin
+        if(!Resetn) begin // initialize all elements of the board
+            for (i = 0; i < 42; i = i + 1) begin
+                board[i] <= empty;
+            end
+            validMove1=0;
+            validMove2=0;
             for (i = 0; i < 7; i = i + 1) begin
                 colCount[i] = 3'b000;
             end
         end
-    end
-    // assign LEDR[9:7] = colCount[3];
-    always @(posedge CLOCK_50)
-        if(checkwin1 && colCount[currCol]<3'b110) begin
+        else if(checkwin1 && colCount[currCol]<3'b110) begin
             validMove1<=1;
             board[(5-colCount[currCol])*7+currCol] <= p1;
             colCount[currCol] <= colCount[currCol]+1;
@@ -114,6 +106,7 @@ module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, input [7:0] receiv
         else if(checkwin2 && colCount[currCol]>=3'b110) begin
             validMove2 <= 0;
         end
+    end
 
     //calc_win module -- full code
 endmodule
@@ -134,13 +127,15 @@ endmodule
 
 module Counter_currCol(input shiftR, shiftL, HSecEn, clock, Resetn, output reg [2:0] currCol);
     always @(posedge clock or negedge Resetn) begin
-        if(!Resetn) begin
-            currCol = 3'b011;  // start in middle col
+        if (!Resetn) begin
+            currCol <= 3'b011;  // Start in middle column
+        end else if (HSecEn) begin
+            if (shiftR && currCol < 3'b111) 
+                currCol <= currCol + 1; // Shift right
+            else if (shiftL && currCol > 3'b000) 
+                currCol <= currCol - 1; // Shift left
         end
     end
-    always @(posedge HSecEn)
-        if(shiftR&&currCol<3'b111) currCol<=currCol+1; //HSecEn to stop it from going right too fast
-        else if(shiftL&&currCol>3'b000) currCol<=currCol-1;
 endmodule
 
 module FSM(input start, Resetn, right, left, place, win, Clock, validMove1, validMove2, output shiftR, shiftL, P1_turn, P2_turn, checkwin1, checkwin2);

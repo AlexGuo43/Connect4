@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Alex/Desktop/labs/Connect4/sim
 vAltera_UP_PS2_Command_Out
-Z1 !s110 1731733380
+Z1 !s110 1731800211
 !i10b 1
 !s100 ZjDIV:z^W4aE7ECD]ReVK0
 IU]h3@CJD>0jRZPEfYKgI33
@@ -23,9 +23,9 @@ Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1731733380.000000
-Z7 !s107 ../top.v|../PS2_Controller.v|../part1.v|../Altera_UP_PS2_Data_In.v|../Altera_UP_PS2_Command_Out.v|
-Z8 !s90 ../Altera_UP_PS2_Command_Out.v|../Altera_UP_PS2_Data_In.v|../part1.v|../PS2_Controller.v|../top.v|
+Z6 !s108 1731800211.000000
+Z7 !s107 ../top.v|../PS2_Controller.v|../part1.v|../legacypart1.v|../Altera_UP_PS2_Data_In.v|../Altera_UP_PS2_Command_Out.v|
+Z8 !s90 ../Altera_UP_PS2_Command_Out.v|../Altera_UP_PS2_Data_In.v|../legacypart1.v|../part1.v|../PS2_Controller.v|../top.v|
 !i113 1
 Z9 tCvgOpt 0
 n@altera_@u@p_@p@s2_@command_@out
@@ -92,6 +92,26 @@ R8
 !i113 1
 R9
 n@f@s@m
+vlegacypart1
+R1
+!i10b 1
+!s100 ]SY;K8oC[ZS@JWaHD]RVT3
+I;S<LPPE?>lWCi<hnW]0iD3
+R2
+R0
+w1731800140
+8../legacypart1.v
+F../legacypart1.v
+L0 13
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9
 vpart1
 R1
 !i10b 1
@@ -176,11 +196,11 @@ R9
 vtop
 R1
 !i10b 1
-!s100 MX=NajM9J4m=^C=8^k5;L2
-IInigRio3TFlPK4cI@jH2E2
+!s100 XdzoX@cOMUGhie:<PoGBm3
+IIejX511OMhRHmRBd7915[0
 R2
 R0
-w1731730559
+w1731798890
 8../top.v
 F../top.v
 L0 4
