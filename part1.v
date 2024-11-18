@@ -33,7 +33,8 @@ module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, input [7:0] receiv
 
     register_26bit enabler(CLOCK_50, Resetn, Q);
     assign HSecEn = ~(|Q[25:0]);
-
+	 
+	 reg released_key;
     //Setting up game logic FSM
     // wire right, left, place; //for no ps2 keyboard
     reg right, left, place;
@@ -42,22 +43,42 @@ module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, input [7:0] receiv
             right <= 0;
             left <= 0;
             place <= 0;
-        end else if (received_data_en) begin
-            case (received_data)
-                8'h23: right <= 1;  // D key
-                8'h1C: left <= 1;   // A key
-                8'h29: place <= 1;  // Spacebar
-                default: begin
-                    right <= 0;
-                    left <= 0;
-                    place <= 0;
-                end
-            endcase
-        end
-        else begin // if key is not pressed, make sure it falls back to 0
-            right <= 0;
-            left <= 0;
-            place <= 0;
+				released_key<=0;
+        end 
+		  else begin
+				if(received_data==8'hF0) begin
+					released_key<=1;
+					right<=0;
+					left<=0;
+					place<=0; //make sure signals fall back to zero on key release
+				end
+				else if(released_key) begin
+					case (received_data)
+						 8'h23: begin
+								right <= 1;  // D key
+								released_key<=0;
+						 end
+						 8'h1C: begin
+								  left <= 1;   // A key
+								  released_key<=0;
+						 end
+						 8'h29: begin
+								  place <= 1;  // Spacebar
+								  released_key<=0;
+						 end
+						 default: begin
+							  right <= 0;
+							  left <= 0;
+							  place <= 0;
+							  released_key<=0;
+						 end
+					endcase
+				end
+				else begin
+					right<=0;
+					left<=0;
+					place<=0; //make sure signals fall back to zero on key release
+				end
         end
     end
     reg win = 0;
@@ -77,13 +98,13 @@ module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, input [7:0] receiv
     // Counter_currCol module
     wire [2:0] currCol;
     Counter_currCol U2(shiftR, shiftL, HSecEn, CLOCK_50, Resetn, currCol[2:0]); //Clocked by HSecEn to stop going right too quickly
-    // assign LEDR[9:7] = currCol;
+    assign LEDR[9:7] = currCol;
 
     // Counter_colCount module -- full code since you can't pass multi-dimensional arrays...
     // Also handles all actions of place command, (actions only happen once signalled by checkwin1/2)
     reg [2:0] colCount [0:6]; //track number of pieces in each col
 
-    assign LEDR[9:7] = colCount[3];
+    //assign LEDR[9:7] = colCount[3];
     always @(posedge CLOCK_50 or negedge Resetn) begin
         if(!Resetn) begin // initialize all elements of the board
             for (i = 0; i < 42; i = i + 1) begin
@@ -112,6 +133,7 @@ module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, input [7:0] receiv
             validMove2 <= 0;
         end
     end
+	 assign LEDR[2] = received_data_en;
 
     //calc_win module -- full code
 endmodule
@@ -124,7 +146,7 @@ module register_26bit(Clock, Resetn, Q);
         if (!Resetn)
             Q <= 26'b0;
         else
-            if (Q == 150000 - 1) // -->!!!real life: 25000000 - 1, DESim: 150000 - 1, ModelSim: 4 - 1 !!!<--
+            if (Q == 25000000 - 1) // -->!!!real life: 25000000 - 1, DESim: 150000 - 1, ModelSim: 4 - 1 !!!<--
                 Q <= 26'b0;
             else
                 Q <= Q + 1;
@@ -134,8 +156,8 @@ module Counter_currCol(input shiftR, shiftL, HSecEn, clock, Resetn, output reg [
     always @(posedge clock or negedge Resetn) begin
         if (!Resetn) begin
             currCol <= 3'b011;  // Start in middle column
-        end else if (HSecEn) begin
-            if (shiftR && currCol < 3'b111) 
+        end else begin
+            if (shiftR && currCol < 3'b110) 
                 currCol <= currCol + 1; // Shift right
             else if (shiftL && currCol > 3'b000) 
                 currCol <= currCol - 1; // Shift left
