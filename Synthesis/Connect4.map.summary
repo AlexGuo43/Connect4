@@ -1,17 +1,17 @@
-Analysis & Synthesis Status : Successful - Sat Nov 16 23:27:31 2024
-Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Analysis & Synthesis Status : Successful - Fri Nov 22 20:36:09 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : Connect4
 Top-level Entity Name : Connect4
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 157
+Total registers : 207
 Total pins : 146
 Total virtual pins : 0
-Total block memory bits : 0
-Total DSP Blocks : 0
+Total block memory bits : 57,984
+Total DSP Blocks : 8
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
 Total HSSI PMA TX Serializers : 0
-Total PLLs : 0
+Total PLLs : 1
 Total DLLs : 0

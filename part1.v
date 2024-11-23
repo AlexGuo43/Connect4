@@ -8,7 +8,7 @@ say Player 1's turn, and LEDR[1] will say it's Player 2's turn.
 Start will be KEY[1] and Resetn will be KEY[0]
 */
 
-module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, input [7:0] received_data, input received_data_en, output [9:0] LEDR);
+module part1(input [9:0] SW, input CLOCK_50, input [3:0] KEY, output [6:0] HEX3, HEX2, HEX1, HEX0, output [7:0] VGA_R, VGA_G, VGA_B, output VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N, VGA_CLK, input [7:0] received_data, input received_data_en, output [9:0] LEDR);
 
     //game board and counters
     wire start, Resetn;
@@ -35,6 +35,8 @@ module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, input [7:0] receiv
     assign HSecEn = ~(|Q[25:0]);
 	 
 	 reg released_key;
+	 reg space_go;
+	 assign go = released_key && space_go;
     //Setting up game logic FSM
     // wire right, left, place; //for no ps2 keyboard
     reg right, left, place;
@@ -44,8 +46,10 @@ module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, input [7:0] receiv
             left <= 0;
             place <= 0;
 				released_key<=0;
+				space_go<=0;
         end 
 		  else begin
+				if(received_data==8'h29) space_go <=1;
 				if(received_data==8'hF0) begin
 					released_key<=1;
 					right<=0;
@@ -65,6 +69,7 @@ module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, input [7:0] receiv
 						 8'h29: begin
 								  place <= 1;  // Spacebar
 								  released_key<=0;
+								  space_go<=0;
 						 end
 						 default: begin
 							  right <= 0;
@@ -134,6 +139,9 @@ module part1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, input [7:0] receiv
         end
     end
 	 assign LEDR[2] = received_data_en;
+	 
+	 // VGA - need to pass released_key to give earliest signal to give VGA drawer enough time
+	 vga_demo VGA_MOD (CLOCK_50, SW[9:0], KEY[3:0], P1_turn, P2_turn, go, currCol, colCount[0], colCount[1], colCount[2], colCount[3], colCount[4], colCount[5], colCount[6], HEX3, HEX2, HEX1, HEX0, VGA_R, VGA_G, VGA_B, VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N, VGA_CLK);
 
     //calc_win module -- full code
 endmodule
@@ -217,3 +225,4 @@ module FSM(input start, Resetn, right, left, place, win, Clock, validMove1, vali
     assign checkwin1 = (~y[3]&y[2]&~y[1]&~y[0]); // check_win1
     assign checkwin2 = (~y[3]&y[2]&~y[1]&y[0]); // check_win2
 endmodule
+

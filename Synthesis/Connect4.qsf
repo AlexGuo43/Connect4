@@ -6,7 +6,7 @@ set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
 set_global_assignment -name TOP_LEVEL_ENTITY "Connect4"
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "15.1.0"
-set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.1 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.0 Lite Edition"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:31:55 NOVEMBER 16,2024"
 set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
 set_global_assignment -name DEVICE_FILTER_PIN_COUNT 896
@@ -352,6 +352,13 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE ../VGA_adapter_multi_objects/object_mem2.v
+set_global_assignment -name VERILOG_FILE ../VGA_adapter_multi_objects/object_mem1.v
+set_global_assignment -name VERILOG_FILE ../VGA_adapter_multi_objects/vga_adapter/vga_address_translator.v
+set_global_assignment -name VERILOG_FILE ../VGA_adapter_multi_objects/vga_adapter/vga_adapter.v
+set_global_assignment -name VERILOG_FILE ../VGA_adapter_multi_objects/vga_adapter/vga_controller.v
+set_global_assignment -name VERILOG_FILE ../VGA_adapter_multi_objects/vga_adapter/vga_pll.v
+set_global_assignment -name VERILOG_FILE ../VGA_adapter_multi_objects/vga_demo.v
 set_global_assignment -name VERILOG_FILE ../part1.v
 set_global_assignment -name VERILOG_FILE ../Altera_UP_PS2_Data_In.v
 set_global_assignment -name VERILOG_FILE ../Altera_UP_PS2_Command_Out.v

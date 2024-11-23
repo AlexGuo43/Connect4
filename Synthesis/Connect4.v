@@ -102,7 +102,9 @@ PS2_Controller ps2 (
 		  .received_data		(ps2_key_data),
 		  .received_data_en	(ps2_key_pressed)
 );
-part1 U1 (SW[2:0], CLOCK_50, KEY[1:0], last_data_received[7:0], ps2_key_pressed, LEDR);
+part1 U1 (SW[9:0], CLOCK_50, KEY[3:0], HEX3, HEX2, HEX1, HEX0, VGA_R, VGA_G, VGA_B, VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N, VGA_CLK, last_data_received[7:0], ps2_key_pressed, LEDR);
+//VGA Screen
+//vga_demo U2 (CLOCK_50, SW[9:0], KEY[3:0], HEX3, HEX2, HEX1, HEX0, VGA_R, VGA_G, VGA_B, VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N, VGA_CLK);
 
 
 

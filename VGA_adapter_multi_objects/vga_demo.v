@@ -7,7 +7,7 @@
 *   SW[9] selects between two different objects (each with its own MIF file).
 */
 module vga_demo(
-    CLOCK_50, SW, KEY, HEX3, HEX2, HEX1, HEX0,
+    CLOCK_50, SW, KEY, P1_turn, P2_turn, place, currCol, colCount0, colCount1,colCount2,colCount3,colCount4,colCount5,colCount6, HEX3, HEX2, HEX1, HEX0,
     VGA_R, VGA_G, VGA_B,
     VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N, VGA_CLK
 );
@@ -15,6 +15,17 @@ module vga_demo(
     input CLOCK_50;    
     input [9:0] SW;         // SW[9] used to select object
     input [3:0] KEY;
+	 input P1_turn;
+	 input P2_turn;
+	 input place;
+	 input [2:0] currCol;
+	 input [2:0] colCount0;
+	 input [2:0] colCount1;
+	 input [2:0] colCount2;
+	 input [2:0] colCount3;
+	 input [2:0] colCount4;
+	 input [2:0] colCount5;
+	 input [2:0] colCount6;
     output [6:0] HEX3, HEX2, HEX1, HEX0;
     output [7:0] VGA_R;     // VGA Red color signal
     output [7:0] VGA_G;     // VGA Green color signal
@@ -27,22 +38,55 @@ module vga_demo(
 
     wire [7:0] X;           // starting X location 
     wire [6:0] Y;           // starting Y location 
+	 wire [7:0] calc_X;           // starting X location 
+    reg [6:0] calc_Y;           // starting Y location 
     wire [2:0] XC, YC;      // used to access object memory
     wire Ex, Ey;
     wire [7:0] VGA_X;       // x location of each object pixel
     wire [6:0] VGA_Y;       // y location of each object pixel
     wire [2:0] VGA_COLOR;   // color of each object pixel
+	 
+	 /*wire [2:0] currCol = SW[2:0];    
+    reg [2:0] colCount [0:6];  
+	 always @(*) begin
+        case (currCol)
+            3'b000: colCount[0] = SW[5:3];
+            3'b001: colCount[1] = SW[5:3];
+            3'b010: colCount[2] = SW[5:3];
+            3'b011: colCount[3] = SW[5:3];
+            3'b100: colCount[4] = SW[5:3];
+            3'b101: colCount[5] = SW[5:3];
+            3'b110: colCount[6] = SW[5:3];
+            default: colCount[currCol] = 3'b000;
+        endcase
+    end*/
+	 always @(posedge CLOCK_50) begin
+		 case (currCol)
+			  3'b000: calc_Y = 89 - 13 * (colCount0 > 5 ? 5 : colCount0);
+			  3'b001: calc_Y = 89 - 13 * (colCount1 > 5 ? 5 : colCount1);
+			  3'b010: calc_Y = 89 - 13 * (colCount2 > 5 ? 5 : colCount2);
+			  3'b011: calc_Y = 89 - 13 * (colCount3 > 5 ? 5 : colCount3);
+			  3'b100: calc_Y = 89 - 13 * (colCount4 > 5 ? 5 : colCount4);
+			  3'b101: calc_Y = 89 - 13 * (colCount5 > 5 ? 5 : colCount5);
+			  3'b110: calc_Y = 89 - 13 * (colCount6 > 5 ? 5 : colCount6);
+			  default: calc_Y = 89;
+		 endcase
+	 end
+	 assign calc_X = 37+13*currCol;
+	 //assign calc_Y = 89 - 13 * colCount[currCol];
 
     // Store (x, y) starting location
-    regn U1 (SW[6:0], KEY[0], ~KEY[1], CLOCK_50, Y);
+	 // Changing to KEY[1] and KEY[2] to just be KEY[2] to update both X and Y
+    regn U1 (calc_Y, KEY[0], place, CLOCK_50, Y);
         defparam U1.n = 7;
-    regn U2 (SW[7:0], KEY[0], ~KEY[2], CLOCK_50, X);
+    regn U2 (calc_X, KEY[0], place, CLOCK_50, X);
         defparam U2.n = 8;
 
     // Column and Row Counters
     count U3 (CLOCK_50, KEY[0], Ex, XC);    // column counter
         defparam U3.n = 3;
-    regn U5 (1'b1, KEY[0], ~KEY[3], CLOCK_50, Ex);  // enable XC when VGA plotting starts
+    //regn U5 (1'b1, KEY[0], ~KEY[3], CLOCK_50, Ex);  // enable XC when VGA plotting starts
+	 regn U5 (1'b1, KEY[0], place , CLOCK_50, Ex);
         defparam U5.n = 1;
     count U4 (CLOCK_50, KEY[0], Ey, YC);    // row counter
         defparam U4.n = 3;
@@ -71,7 +115,7 @@ module vga_demo(
     );
 
     // Select color output based on SW[9]
-    assign VGA_COLOR = SW[9] ? color_object1 : color_object2;
+    assign VGA_COLOR = P2_turn ? color_object1 : color_object2;
 
     // The object memory takes one clock cycle to provide data, so store
     // the current values of (x, y) addresses to remain synchronized
@@ -87,7 +131,8 @@ module vga_demo(
         .colour(VGA_COLOR),
         .x(VGA_X),
         .y(VGA_Y),
-        .plot(~KEY[3]),
+        //.plot(~KEY[3]),
+		  .plot(place),
         .VGA_R(VGA_R),
         .VGA_G(VGA_G),
         .VGA_B(VGA_B),
