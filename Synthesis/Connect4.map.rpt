@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Connect4
-Fri Nov 22 20:36:09 2024
-Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Sat Nov 23 16:41:01 2024
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
 ---------------------
@@ -14,56 +14,55 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. Analysis & Synthesis DSP Block Usage Summary
- 10. State Machine - |Connect4|PS2_Controller:ps2|s_ps2_transceiver
- 11. State Machine - |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter
- 12. State Machine - |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver
- 13. Registers Removed During Synthesis
- 14. Removed Registers Triggering Further Register Optimizations
- 15. General Register Statistics
- 16. Inverted Register Statistics
- 17. Multiplexer Restructuring Statistics (Restructuring Performed)
- 18. Source assignments for part1:U1|vga_demo:VGA_MOD|object_mem1:U6_object1|altsyncram:altsyncram_component|altsyncram_hhg1:auto_generated
- 19. Source assignments for part1:U1|vga_demo:VGA_MOD|object_mem2:U6_object2|altsyncram:altsyncram_component|altsyncram_ihg1:auto_generated
- 20. Source assignments for part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_usm1:auto_generated
- 21. Parameter Settings for User Entity Instance: PS2_Controller:ps2
- 22. Parameter Settings for User Entity Instance: PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out
- 23. Parameter Settings for User Entity Instance: part1:U1
- 24. Parameter Settings for User Entity Instance: part1:U1|FSM:U1
- 25. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|regn:U1
- 26. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|regn:U2
- 27. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|count:U3
- 28. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|regn:U5
- 29. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|count:U4
- 30. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|object_mem1:U6_object1|altsyncram:altsyncram_component
- 31. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|object_mem2:U6_object2|altsyncram:altsyncram_component
- 32. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|regn:U7
- 33. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|regn:U8
- 34. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA
- 35. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_address_translator:user_input_translator
- 36. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|altsyncram:VideoMemory
- 37. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
- 38. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_controller:controller
- 39. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
- 40. altsyncram Parameter Settings by Entity Instance
- 41. altpll Parameter Settings by Entity Instance
- 42. Port Connectivity Checks: "part1:U1|vga_demo:VGA_MOD|regn:U8"
- 43. Port Connectivity Checks: "part1:U1|vga_demo:VGA_MOD|regn:U7"
- 44. Port Connectivity Checks: "part1:U1|vga_demo:VGA_MOD|hex7seg:H1"
- 45. Port Connectivity Checks: "part1:U1|vga_demo:VGA_MOD|regn:U5"
- 46. Port Connectivity Checks: "part1:U1|FSM:U1"
- 47. Port Connectivity Checks: "PS2_Controller:ps2"
- 48. Post-Synthesis Netlist Statistics for Top Partition
- 49. Elapsed Time Per Partition
- 50. Analysis & Synthesis Messages
- 51. Analysis & Synthesis Suppressed Messages
+  9. State Machine - |Connect4|PS2_Controller:ps2|s_ps2_transceiver
+ 10. State Machine - |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter
+ 11. State Machine - |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver
+ 12. Registers Removed During Synthesis
+ 13. Removed Registers Triggering Further Register Optimizations
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for part1:U1|vga_demo:VGA_MOD|object_mem1:U6_object1|altsyncram:altsyncram_component|altsyncram_hhg1:auto_generated
+ 18. Source assignments for part1:U1|vga_demo:VGA_MOD|object_mem2:U6_object2|altsyncram:altsyncram_component|altsyncram_ihg1:auto_generated
+ 19. Source assignments for part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_usm1:auto_generated
+ 20. Parameter Settings for User Entity Instance: PS2_Controller:ps2
+ 21. Parameter Settings for User Entity Instance: PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out
+ 22. Parameter Settings for User Entity Instance: part1:U1
+ 23. Parameter Settings for User Entity Instance: part1:U1|FSM:U1
+ 24. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|regn:U1
+ 25. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|regn:U2
+ 26. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|count:U3
+ 27. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|regn:U5
+ 28. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|count:U4
+ 29. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|object_mem1:U6_object1|altsyncram:altsyncram_component
+ 30. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|object_mem2:U6_object2|altsyncram:altsyncram_component
+ 31. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|regn:U7
+ 32. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|regn:U8
+ 33. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA
+ 34. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_address_translator:user_input_translator
+ 35. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|altsyncram:VideoMemory
+ 36. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
+ 37. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_controller:controller
+ 38. Parameter Settings for User Entity Instance: part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
+ 39. altsyncram Parameter Settings by Entity Instance
+ 40. altpll Parameter Settings by Entity Instance
+ 41. Port Connectivity Checks: "part1:U1|vga_demo:VGA_MOD|regn:U8"
+ 42. Port Connectivity Checks: "part1:U1|vga_demo:VGA_MOD|regn:U7"
+ 43. Port Connectivity Checks: "part1:U1|vga_demo:VGA_MOD|hex7seg:H1"
+ 44. Port Connectivity Checks: "part1:U1|vga_demo:VGA_MOD|regn:U5"
+ 45. Port Connectivity Checks: "part1:U1|FSM:U1"
+ 46. Port Connectivity Checks: "PS2_Controller:ps2"
+ 47. Post-Synthesis Netlist Statistics for Top Partition
+ 48. Elapsed Time Per Partition
+ 49. Analysis & Synthesis Messages
+ 50. Analysis & Synthesis Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2024  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -83,17 +82,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Nov 22 20:36:09 2024          ;
-; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Analysis & Synthesis Status     ; Successful - Sat Nov 23 16:41:01 2024          ;
+; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; Connect4                                       ;
 ; Top-level Entity Name           ; Connect4                                       ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 207                                            ;
+; Total registers                 ; 483                                            ;
 ; Total pins                      ; 146                                            ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 57,984                                         ;
-; Total DSP Blocks                ; 8                                              ;
+; Total DSP Blocks                ; 0                                              ;
 ; Total HSSI RX PCSs              ; 0                                              ;
 ; Total HSSI PMA RX Deserializers ; 0                                              ;
 ; Total HSSI TX PCSs              ; 0                                              ;
@@ -195,59 +194,63 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 28          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                         ;
-+-------------------------------------------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                                  ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                          ; Library ;
-+-------------------------------------------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+---------+
-; ../VGA_adapter_multi_objects/object_mem2.v                        ; yes             ; User Wizard-Generated File             ; C:/Connect4/VGA_adapter_multi_objects/object_mem2.v                                   ;         ;
-; ../VGA_adapter_multi_objects/object_mem1.v                        ; yes             ; User Wizard-Generated File             ; C:/Connect4/VGA_adapter_multi_objects/object_mem1.v                                   ;         ;
-; ../VGA_adapter_multi_objects/vga_adapter/vga_address_translator.v ; yes             ; User Verilog HDL File                  ; C:/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_address_translator.v            ;         ;
-; ../VGA_adapter_multi_objects/vga_adapter/vga_adapter.v            ; yes             ; User Verilog HDL File                  ; C:/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_adapter.v                       ;         ;
-; ../VGA_adapter_multi_objects/vga_adapter/vga_controller.v         ; yes             ; User Verilog HDL File                  ; C:/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_controller.v                    ;         ;
-; ../VGA_adapter_multi_objects/vga_adapter/vga_pll.v                ; yes             ; User Wizard-Generated File             ; C:/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_pll.v                           ;         ;
-; ../VGA_adapter_multi_objects/vga_demo.v                           ; yes             ; User Verilog HDL File                  ; C:/Connect4/VGA_adapter_multi_objects/vga_demo.v                                      ;         ;
-; ../part1.v                                                        ; yes             ; User Verilog HDL File                  ; C:/Connect4/part1.v                                                                   ;         ;
-; ../Altera_UP_PS2_Data_In.v                                        ; yes             ; User Verilog HDL File                  ; C:/Connect4/Altera_UP_PS2_Data_In.v                                                   ;         ;
-; ../Altera_UP_PS2_Command_Out.v                                    ; yes             ; User Verilog HDL File                  ; C:/Connect4/Altera_UP_PS2_Command_Out.v                                               ;         ;
-; ../PS2_Controller.v                                               ; yes             ; User Verilog HDL File                  ; C:/Connect4/PS2_Controller.v                                                          ;         ;
-; connect4.v                                                        ; yes             ; Auto-Found Verilog HDL File            ; C:/Connect4/Synthesis/connect4.v                                                      ;         ;
-; altsyncram.tdf                                                    ; yes             ; Megafunction                           ; c:/intelfpga/quartus_lite_v23.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc                                             ; yes             ; Megafunction                           ; c:/intelfpga/quartus_lite_v23.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                                                       ; yes             ; Megafunction                           ; c:/intelfpga/quartus_lite_v23.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                                                    ; yes             ; Megafunction                           ; c:/intelfpga/quartus_lite_v23.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal231.inc                                                    ; yes             ; Megafunction                           ; c:/intelfpga/quartus_lite_v23.1/quartus/libraries/megafunctions/aglobal231.inc        ;         ;
-; a_rdenreg.inc                                                     ; yes             ; Megafunction                           ; c:/intelfpga/quartus_lite_v23.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                                                        ; yes             ; Megafunction                           ; c:/intelfpga/quartus_lite_v23.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                                                        ; yes             ; Megafunction                           ; c:/intelfpga/quartus_lite_v23.1/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                                                      ; yes             ; Megafunction                           ; c:/intelfpga/quartus_lite_v23.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_hhg1.tdf                                            ; yes             ; Auto-Generated Megafunction            ; C:/Connect4/Synthesis/db/altsyncram_hhg1.tdf                                          ;         ;
-; ../VGA_adapter_multi_objects/object_mem1.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/Connect4/VGA_adapter_multi_objects/object_mem1.mif                                 ;         ;
-; db/altsyncram_ihg1.tdf                                            ; yes             ; Auto-Generated Megafunction            ; C:/Connect4/Synthesis/db/altsyncram_ihg1.tdf                                          ;         ;
-; ../VGA_adapter_multi_objects/object_mem2.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/Connect4/VGA_adapter_multi_objects/object_mem2.mif                                 ;         ;
-; db/altsyncram_usm1.tdf                                            ; yes             ; Auto-Generated Megafunction            ; C:/Connect4/Synthesis/db/altsyncram_usm1.tdf                                          ;         ;
-; image.colour.mif                                                  ; yes             ; Auto-Found Memory Initialization File  ; C:/Connect4/Synthesis/image.colour.mif                                                ;         ;
-; db/decode_7la.tdf                                                 ; yes             ; Auto-Generated Megafunction            ; C:/Connect4/Synthesis/db/decode_7la.tdf                                               ;         ;
-; db/decode_01a.tdf                                                 ; yes             ; Auto-Generated Megafunction            ; C:/Connect4/Synthesis/db/decode_01a.tdf                                               ;         ;
-; db/mux_ifb.tdf                                                    ; yes             ; Auto-Generated Megafunction            ; C:/Connect4/Synthesis/db/mux_ifb.tdf                                                  ;         ;
-; altpll.tdf                                                        ; yes             ; Megafunction                           ; c:/intelfpga/quartus_lite_v23.1/quartus/libraries/megafunctions/altpll.tdf            ;         ;
-; stratix_pll.inc                                                   ; yes             ; Megafunction                           ; c:/intelfpga/quartus_lite_v23.1/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
-; stratixii_pll.inc                                                 ; yes             ; Megafunction                           ; c:/intelfpga/quartus_lite_v23.1/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
-; cycloneii_pll.inc                                                 ; yes             ; Megafunction                           ; c:/intelfpga/quartus_lite_v23.1/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
-; db/altpll_80u.tdf                                                 ; yes             ; Auto-Generated Megafunction            ; C:/Connect4/Synthesis/db/altpll_80u.tdf                                               ;         ;
-+-------------------------------------------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                      ;
++-------------------------------------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                  ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                       ; Library ;
++-------------------------------------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------+---------+
+; ../VGA_adapter_multi_objects/object_mem2.v                        ; yes             ; User Wizard-Generated File             ; C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/object_mem2.v                        ;         ;
+; ../VGA_adapter_multi_objects/object_mem1.v                        ; yes             ; User Wizard-Generated File             ; C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/object_mem1.v                        ;         ;
+; ../VGA_adapter_multi_objects/vga_adapter/vga_address_translator.v ; yes             ; User Verilog HDL File                  ; C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_address_translator.v ;         ;
+; ../VGA_adapter_multi_objects/vga_adapter/vga_adapter.v            ; yes             ; User Verilog HDL File                  ; C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_adapter.v            ;         ;
+; ../VGA_adapter_multi_objects/vga_adapter/vga_controller.v         ; yes             ; User Verilog HDL File                  ; C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_controller.v         ;         ;
+; ../VGA_adapter_multi_objects/vga_adapter/vga_pll.v                ; yes             ; User Wizard-Generated File             ; C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_pll.v                ;         ;
+; ../VGA_adapter_multi_objects/vga_demo.v                           ; yes             ; User Verilog HDL File                  ; C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_demo.v                           ;         ;
+; ../part1.v                                                        ; yes             ; User Verilog HDL File                  ; C:/Users/Alex/Desktop/labs/Connect4/part1.v                                                        ;         ;
+; ../Altera_UP_PS2_Data_In.v                                        ; yes             ; User Verilog HDL File                  ; C:/Users/Alex/Desktop/labs/Connect4/Altera_UP_PS2_Data_In.v                                        ;         ;
+; ../Altera_UP_PS2_Command_Out.v                                    ; yes             ; User Verilog HDL File                  ; C:/Users/Alex/Desktop/labs/Connect4/Altera_UP_PS2_Command_Out.v                                    ;         ;
+; ../PS2_Controller.v                                               ; yes             ; User Verilog HDL File                  ; C:/Users/Alex/Desktop/labs/Connect4/PS2_Controller.v                                               ;         ;
+; connect4.v                                                        ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v                                           ;         ;
+; altsyncram.tdf                                                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf                           ;         ;
+; stratix_ram_block.inc                                             ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                    ;         ;
+; lpm_mux.inc                                                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mux.inc                              ;         ;
+; lpm_decode.inc                                                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_decode.inc                           ;         ;
+; aglobal231.inc                                                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc                           ;         ;
+; a_rdenreg.inc                                                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/a_rdenreg.inc                            ;         ;
+; altrom.inc                                                        ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altrom.inc                               ;         ;
+; altram.inc                                                        ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altram.inc                               ;         ;
+; altdpram.inc                                                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altdpram.inc                             ;         ;
+; db/altsyncram_hhg1.tdf                                            ; yes             ; Auto-Generated Megafunction            ; C:/Users/Alex/Desktop/labs/Connect4/Synthesis/db/altsyncram_hhg1.tdf                               ;         ;
+; ../VGA_adapter_multi_objects/object_mem1.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/object_mem1.mif                      ;         ;
+; db/altsyncram_ihg1.tdf                                            ; yes             ; Auto-Generated Megafunction            ; C:/Users/Alex/Desktop/labs/Connect4/Synthesis/db/altsyncram_ihg1.tdf                               ;         ;
+; ../VGA_adapter_multi_objects/object_mem2.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/object_mem2.mif                      ;         ;
+; db/altsyncram_usm1.tdf                                            ; yes             ; Auto-Generated Megafunction            ; C:/Users/Alex/Desktop/labs/Connect4/Synthesis/db/altsyncram_usm1.tdf                               ;         ;
+; image.colour.mif                                                  ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Alex/Desktop/labs/Connect4/Synthesis/image.colour.mif                                     ;         ;
+; db/decode_7la.tdf                                                 ; yes             ; Auto-Generated Megafunction            ; C:/Users/Alex/Desktop/labs/Connect4/Synthesis/db/decode_7la.tdf                                    ;         ;
+; db/decode_01a.tdf                                                 ; yes             ; Auto-Generated Megafunction            ; C:/Users/Alex/Desktop/labs/Connect4/Synthesis/db/decode_01a.tdf                                    ;         ;
+; db/mux_ifb.tdf                                                    ; yes             ; Auto-Generated Megafunction            ; C:/Users/Alex/Desktop/labs/Connect4/Synthesis/db/mux_ifb.tdf                                       ;         ;
+; altpll.tdf                                                        ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altpll.tdf                               ;         ;
+; stratix_pll.inc                                                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_pll.inc                          ;         ;
+; stratixii_pll.inc                                                 ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratixii_pll.inc                        ;         ;
+; cycloneii_pll.inc                                                 ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/cycloneii_pll.inc                        ;         ;
+; db/altpll_80u.tdf                                                 ; yes             ; Auto-Generated Megafunction            ; C:/Users/Alex/Desktop/labs/Connect4/Synthesis/db/altpll_80u.tdf                                    ;         ;
++-------------------------------------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -255,30 +258,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 200            ;
+; Estimate of Logic utilization (ALMs needed) ; 422            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 326            ;
-;     -- 7 input functions                    ; 1              ;
-;     -- 6 input functions                    ; 65             ;
-;     -- 5 input functions                    ; 34             ;
-;     -- 4 input functions                    ; 46             ;
-;     -- <=3 input functions                  ; 180            ;
+; Combinational ALUT usage for logic          ; 658            ;
+;     -- 7 input functions                    ; 4              ;
+;     -- 6 input functions                    ; 138            ;
+;     -- 5 input functions                    ; 68             ;
+;     -- 4 input functions                    ; 119            ;
+;     -- <=3 input functions                  ; 329            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 207            ;
+; Dedicated logic registers                   ; 483            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 146            ;
 ; Total MLAB memory bits                      ; 0              ;
 ; Total block memory bits                     ; 57984          ;
 ;                                             ;                ;
-; Total DSP Blocks                            ; 8              ;
+; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Total PLLs                                  ; 1              ;
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 193            ;
-; Total fan-out                               ; 2475           ;
-; Average fan-out                             ; 2.85           ;
+; Maximum fan-out                             ; 469            ;
+; Total fan-out                               ; 4687           ;
+; Average fan-out                             ; 3.19           ;
 +---------------------------------------------+----------------+
 
 
@@ -287,14 +290,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
 ; Compilation Hierarchy Node                                    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                ; Entity Name               ; Library Name ;
 +---------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
-; |Connect4                                                     ; 326 (2)             ; 207 (8)                   ; 57984             ; 8          ; 146  ; 0            ; |Connect4                                                                                                                          ; Connect4                  ; work         ;
+; |Connect4                                                     ; 658 (1)             ; 483 (8)                   ; 57984             ; 0          ; 146  ; 0            ; |Connect4                                                                                                                          ; Connect4                  ; work         ;
 ;    |PS2_Controller:ps2|                                       ; 106 (6)             ; 90 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |Connect4|PS2_Controller:ps2                                                                                                       ; PS2_Controller            ; work         ;
 ;       |Altera_UP_PS2_Command_Out:PS2_Command_Out|             ; 86 (86)             ; 60 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out                                                             ; Altera_UP_PS2_Command_Out ; work         ;
 ;       |Altera_UP_PS2_Data_In:PS2_Data_In|                     ; 14 (14)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In                                                                     ; Altera_UP_PS2_Data_In     ; work         ;
-;    |part1:U1|                                                 ; 218 (34)            ; 109 (28)                  ; 57984             ; 8          ; 0    ; 0            ; |Connect4|part1:U1                                                                                                                 ; part1                     ; work         ;
-;       |Counter_currCol:U2|                                    ; 4 (4)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |Connect4|part1:U1|Counter_currCol:U2                                                                                              ; Counter_currCol           ; work         ;
-;       |FSM:U1|                                                ; 17 (17)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Connect4|part1:U1|FSM:U1                                                                                                          ; FSM                       ; work         ;
-;       |vga_demo:VGA_MOD|                                      ; 163 (61)            ; 74 (7)                    ; 57984             ; 8          ; 0    ; 0            ; |Connect4|part1:U1|vga_demo:VGA_MOD                                                                                                ; vga_demo                  ; work         ;
+;    |part1:U1|                                                 ; 551 (150)           ; 385 (111)                 ; 57984             ; 0          ; 0    ; 0            ; |Connect4|part1:U1                                                                                                                 ; part1                     ; work         ;
+;       |Counter_currCol:U2|                                    ; 6 (6)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |Connect4|part1:U1|Counter_currCol:U2                                                                                              ; Counter_currCol           ; work         ;
+;       |FSM:U1|                                                ; 16 (16)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Connect4|part1:U1|FSM:U1                                                                                                          ; FSM                       ; work         ;
+;       |vga_demo:VGA_MOD|                                      ; 379 (277)           ; 267 (201)                 ; 57984             ; 0          ; 0    ; 0            ; |Connect4|part1:U1|vga_demo:VGA_MOD                                                                                                ; vga_demo                  ; work         ;
 ;          |count:U3|                                           ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |Connect4|part1:U1|vga_demo:VGA_MOD|count:U3                                                                                       ; count                     ; work         ;
 ;          |count:U4|                                           ; 4 (4)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |Connect4|part1:U1|vga_demo:VGA_MOD|count:U4                                                                                       ; count                     ; work         ;
 ;          |hex7seg:H0|                                         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Connect4|part1:U1|vga_demo:VGA_MOD|hex7seg:H0                                                                                     ; hex7seg                   ; work         ;
@@ -308,7 +311,7 @@ https://fpgasoftware.intel.com/eula.
 ;             |altsyncram:altsyncram_component|                 ; 0 (0)               ; 0 (0)                     ; 192               ; 0          ; 0    ; 0            ; |Connect4|part1:U1|vga_demo:VGA_MOD|object_mem2:U6_object2|altsyncram:altsyncram_component                                         ; altsyncram                ; work         ;
 ;                |altsyncram_ihg1:auto_generated|               ; 0 (0)               ; 0 (0)                     ; 192               ; 0          ; 0    ; 0            ; |Connect4|part1:U1|vga_demo:VGA_MOD|object_mem2:U6_object2|altsyncram:altsyncram_component|altsyncram_ihg1:auto_generated          ; altsyncram_ihg1           ; work         ;
 ;          |regn:U1|                                            ; 0 (0)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |Connect4|part1:U1|vga_demo:VGA_MOD|regn:U1                                                                                        ; regn                      ; work         ;
-;          |regn:U2|                                            ; 1 (1)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Connect4|part1:U1|vga_demo:VGA_MOD|regn:U2                                                                                        ; regn                      ; work         ;
+;          |regn:U2|                                            ; 1 (1)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |Connect4|part1:U1|vga_demo:VGA_MOD|regn:U2                                                                                        ; regn                      ; work         ;
 ;          |regn:U5|                                            ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Connect4|part1:U1|vga_demo:VGA_MOD|regn:U5                                                                                        ; regn                      ; work         ;
 ;          |regn:U7|                                            ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Connect4|part1:U1|vga_demo:VGA_MOD|regn:U7                                                                                        ; regn                      ; work         ;
 ;          |regn:U8|                                            ; 0 (0)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |Connect4|part1:U1|vga_demo:VGA_MOD|regn:U8                                                                                        ; regn                      ; work         ;
@@ -336,18 +339,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; part1:U1|vga_demo:VGA_MOD|object_mem2:U6_object2|altsyncram:altsyncram_component|altsyncram_ihg1:auto_generated|ALTSYNCRAM ; AUTO ; ROM              ; 64           ; 3            ; --           ; --           ; 192   ; object_mem2.mif  ;
 ; part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_usm1:auto_generated|ALTSYNCRAM                 ; AUTO ; Simple Dual Port ; 19200        ; 3            ; 19200        ; 3            ; 57600 ; image.colour.mif ;
 +----------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------------------+
-
-
-+-----------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary  ;
-+---------------------------------+-------------+
-; Statistic                       ; Number Used ;
-+---------------------------------+-------------+
-; Independent 9x9                 ; 8           ;
-; Total number of DSP blocks      ; 8           ;
-;                                 ;             ;
-; Fixed Point Unsigned Multiplier ; 8           ;
-+---------------------------------+-------------+
 
 
 Encoding Type:  One-Hot
@@ -403,6 +394,8 @@ Encoding Type:  One-Hot
 ; PS2_Controller:ps2|idle_counter[0..7]                                                                         ; Lost fanout                                                                             ;
 ; PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|ps2_command[1..7]                                ; Merged with PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|ps2_command[0] ;
 ; PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|ps2_command[0]                                   ; Stuck at GND due to stuck port data_in                                                  ;
+; part1:U1|vga_demo:VGA_MOD|calc_X[7]                                                                           ; Stuck at GND due to stuck port data_in                                                  ;
+; part1:U1|vga_demo:VGA_MOD|regn:U2|Q[7]                                                                        ; Stuck at GND due to stuck port data_in                                                  ;
 ; PS2_Controller:ps2|s_ps2_transceiver~2                                                                        ; Lost fanout                                                                             ;
 ; PS2_Controller:ps2|s_ps2_transceiver~3                                                                        ; Lost fanout                                                                             ;
 ; PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter~2                              ; Lost fanout                                                                             ;
@@ -412,14 +405,14 @@ Encoding Type:  One-Hot
 ; PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver~3                                         ; Lost fanout                                                                             ;
 ; PS2_Controller:ps2|s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT                                                  ; Stuck at GND due to stuck port data_in                                                  ;
 ; PS2_Controller:ps2|s_ps2_transceiver.PS2_STATE_4_END_DELAYED                                                  ; Stuck at GND due to stuck port data_in                                                  ;
-; PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent                                 ; Lost fanout                                                                             ;
 ; PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out                    ; Lost fanout                                                                             ;
+; PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent                                 ; Lost fanout                                                                             ;
 ; PS2_Controller:ps2|s_ps2_transceiver.PS2_STATE_3_END_TRANSFER                                                 ; Stuck at GND due to stuck port data_in                                                  ;
 ; PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA                 ; Stuck at GND due to stuck port data_in                                                  ;
 ; PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_0_IDLE               ; Stuck at GND due to stuck port data_in                                                  ;
 ; PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_6_COMMAND_WAS_SENT   ; Lost fanout                                                                             ;
 ; PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_7_TRANSMISSION_ERROR ; Lost fanout                                                                             ;
-; Total Number of Removed Registers = 32                                                                        ;                                                                                         ;
+; Total Number of Removed Registers = 34                                                                        ;                                                                                         ;
 +---------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
 
 
@@ -430,12 +423,14 @@ Encoding Type:  One-Hot
 +--------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------------------------------+
 ; PS2_Controller:ps2|idle_counter[3]                           ; Lost Fanouts              ; PS2_Controller:ps2|idle_counter[4], PS2_Controller:ps2|idle_counter[5],                                       ;
 ;                                                              ;                           ; PS2_Controller:ps2|idle_counter[6], PS2_Controller:ps2|idle_counter[7]                                        ;
-; PS2_Controller:ps2|s_ps2_transceiver~2                       ; Lost Fanouts              ; PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent,                                ;
-;                                                              ;                           ; PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out,                   ;
+; PS2_Controller:ps2|s_ps2_transceiver~2                       ; Lost Fanouts              ; PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out,                   ;
+;                                                              ;                           ; PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent,                                ;
 ;                                                              ;                           ; PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_6_COMMAND_WAS_SENT,  ;
 ;                                                              ;                           ; PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_7_TRANSMISSION_ERROR ;
 ; PS2_Controller:ps2|s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT ; Stuck at GND              ; PS2_Controller:ps2|s_ps2_transceiver.PS2_STATE_3_END_TRANSFER,                                                ;
 ;                                                              ; due to stuck port data_in ; PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA                 ;
+; part1:U1|vga_demo:VGA_MOD|calc_X[7]                          ; Stuck at GND              ; part1:U1|vga_demo:VGA_MOD|regn:U2|Q[7]                                                                        ;
+;                                                              ; due to stuck port data_in ;                                                                                                               ;
 +--------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------------------------------+
 
 
@@ -444,12 +439,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 207   ;
-; Number of registers using Synchronous Clear  ; 144   ;
-; Number of registers using Synchronous Load   ; 6     ;
-; Number of registers using Asynchronous Clear ; 51    ;
+; Total registers                              ; 483   ;
+; Number of registers using Synchronous Clear  ; 166   ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 237   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 130   ;
+; Number of registers using Clock Enable       ; 413   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -459,8 +454,8 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; part1:U1|Counter_currCol:U2|currCol[0] ; 25      ;
-; part1:U1|Counter_currCol:U2|currCol[1] ; 26      ;
+; part1:U1|Counter_currCol:U2|currCol[0] ; 14      ;
+; part1:U1|Counter_currCol:U2|currCol[1] ; 14      ;
 ; Total number of inverted registers = 2 ;         ;
 +----------------------------------------+---------+
 
@@ -470,26 +465,29 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[0]                                                       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Connect4|last_data_received[7]                                                                                                       ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |Connect4|part1:U1|vga_demo:VGA_MOD|regn:U2|Q[3]                                                                                      ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |Connect4|part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_controller:controller|yCounter[4]                                             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[6]                                                      ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[6][1]                                                                                                     ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[5][1]                                                                                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[2]                                                       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Connect4|last_data_received[5]                                                                                                       ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |Connect4|part1:U1|vga_demo:VGA_MOD|regn:U2|Q[0]                                                                                      ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |Connect4|part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_controller:controller|yCounter[2]                                             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[3]                                                      ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[6][2]                                                                                                     ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[5][2]                                                                                                     ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[4][0]                                                                                                     ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[3][1]                                                                                                     ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[2][0]                                                                                                     ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[2][1]                                                                                                     ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[1][2]                                                                                                     ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Connect4|part1:U1|colCount[0][2]                                                                                                     ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Connect4|part1:U1|vga_demo:VGA_MOD|count:U4|Q[2]                                                                                     ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[4]                                    ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Connect4|part1:U1|vga_demo:VGA_MOD|count:U4|Q[0]                                                                                     ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[10]                                   ;
 ; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[1]                                             ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[1]                                                     ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[2]                                                          ;
-; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[7]                                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[0]                                                     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[0]                                                          ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |Connect4|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[17]                                           ;
+; 43:1               ; 7 bits    ; 196 LEs       ; 196 LEs              ; 0 LEs                  ; Yes        ; |Connect4|part1:U1|vga_demo:VGA_MOD|calc_Y[3]                                                                                         ;
+; 43:1               ; 8 bits    ; 224 LEs       ; 216 LEs              ; 8 LEs                  ; Yes        ; |Connect4|part1:U1|vga_demo:VGA_MOD|calc_Y[1]                                                                                         ;
+; 44:1               ; 16 bits   ; 464 LEs       ; 0 LEs                ; 464 LEs                ; Yes        ; |Connect4|part1:U1|vga_demo:VGA_MOD|delay_counter[14]                                                                                 ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Connect4|part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_usm1:auto_generated|mux_ifb:mux3|result_node[2] ;
-; 7:1                ; 9 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |Connect4|part1:U1|Mux0                                                                                                               ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Connect4|part1:U1|Mux0                                                                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1390,44 +1388,45 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 207                         ;
-;     CLR               ; 10                          ;
+; arriav_ff             ; 483                         ;
+;     CLR               ; 9                           ;
 ;     CLR SCLR          ; 10                          ;
-;     ENA               ; 8                           ;
-;     ENA CLR           ; 21                          ;
-;     ENA CLR SCLR      ; 10                          ;
-;     ENA SCLR          ; 91                          ;
+;     CLR SLD           ; 1                           ;
+;     ENA               ; 99                          ;
+;     ENA CLR           ; 191                         ;
+;     ENA CLR SCLR      ; 26                          ;
+;     ENA SCLR          ; 97                          ;
 ;     SCLR              ; 33                          ;
-;     SLD               ; 6                           ;
-;     plain             ; 18                          ;
+;     plain             ; 17                          ;
 ; arriav_io_obuf        ; 20                          ;
-; arriav_lcell_comb     ; 332                         ;
-;     arith             ; 99                          ;
+; arriav_lcell_comb     ; 664                         ;
+;     arith             ; 109                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 88                          ;
-;         2 data inputs ; 10                          ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 212                         ;
+;         1 data inputs ; 99                          ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 1                           ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 531                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 25                          ;
-;         3 data inputs ; 34                          ;
-;         4 data inputs ; 46                          ;
-;         5 data inputs ; 34                          ;
-;         6 data inputs ; 65                          ;
+;         1 data inputs ; 54                          ;
+;         2 data inputs ; 88                          ;
+;         3 data inputs ; 63                          ;
+;         4 data inputs ; 118                         ;
+;         5 data inputs ; 68                          ;
+;         6 data inputs ; 138                         ;
 ;     shared            ; 20                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 12                          ;
 ;         3 data inputs ; 2                           ;
-; arriav_mac            ; 8                           ;
 ; boundary_port         ; 146                         ;
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 15                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.50                        ;
-; Average LUT depth     ; 1.95                        ;
+; Max LUT depth         ; 6.40                        ;
+; Average LUT depth     ; 3.07                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1436,7 +1435,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1445,93 +1444,88 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Fri Nov 22 20:36:04 2024
+    Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+    Info: Processing started: Sat Nov 23 16:40:45 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Connect4 -c Connect4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 20 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /connect4/vga_adapter_multi_objects/object_mem2.v
-    Info (12023): Found entity 1: object_mem2 File: C:/Connect4/VGA_adapter_multi_objects/object_mem2.v Line: 39
-Info (12021): Found 1 design units, including 1 entities, in source file /connect4/vga_adapter_multi_objects/object_mem1.v
-    Info (12023): Found entity 1: object_mem1 File: C:/Connect4/VGA_adapter_multi_objects/object_mem1.v Line: 39
-Info (12021): Found 1 design units, including 1 entities, in source file /connect4/vga_adapter_multi_objects/vga_adapter/vga_address_translator.v
-    Info (12023): Found entity 1: vga_address_translator File: C:/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_address_translator.v Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file /connect4/vga_adapter_multi_objects/vga_adapter/vga_adapter.v
-    Info (12023): Found entity 1: vga_adapter File: C:/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_adapter.v Line: 51
-Info (12021): Found 1 design units, including 1 entities, in source file /connect4/vga_adapter_multi_objects/vga_adapter/vga_controller.v
-    Info (12023): Found entity 1: vga_controller File: C:/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_controller.v Line: 8
-Info (12021): Found 1 design units, including 1 entities, in source file /connect4/vga_adapter_multi_objects/vga_adapter/vga_pll.v
-    Info (12023): Found entity 1: vga_pll File: C:/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_pll.v Line: 36
-Info (12021): Found 4 design units, including 4 entities, in source file /connect4/vga_adapter_multi_objects/vga_demo.v
-    Info (12023): Found entity 1: vga_demo File: C:/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 9
-    Info (12023): Found entity 2: regn File: C:/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 153
-    Info (12023): Found entity 3: count File: C:/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 167
-    Info (12023): Found entity 4: hex7seg File: C:/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 180
-Info (12021): Found 4 design units, including 4 entities, in source file /connect4/part1.v
-    Info (12023): Found entity 1: part1 File: C:/Connect4/part1.v Line: 11
-    Info (12023): Found entity 2: register_26bit File: C:/Connect4/part1.v Line: 149
-    Info (12023): Found entity 3: Counter_currCol File: C:/Connect4/part1.v Line: 163
-    Info (12023): Found entity 4: FSM File: C:/Connect4/part1.v Line: 176
-Info (12021): Found 1 design units, including 1 entities, in source file /connect4/altera_up_ps2_data_in.v
-    Info (12023): Found entity 1: Altera_UP_PS2_Data_In File: C:/Connect4/Altera_UP_PS2_Data_In.v Line: 10
-Info (12021): Found 1 design units, including 1 entities, in source file /connect4/altera_up_ps2_command_out.v
-    Info (12023): Found entity 1: Altera_UP_PS2_Command_Out File: C:/Connect4/Altera_UP_PS2_Command_Out.v Line: 10
-Info (12021): Found 1 design units, including 1 entities, in source file /connect4/ps2_controller.v
-    Info (12023): Found entity 1: PS2_Controller File: C:/Connect4/PS2_Controller.v Line: 9
-Warning (10236): Verilog HDL Implicit Net warning at part1.v(39): created implicit net for "go" File: C:/Connect4/part1.v Line: 39
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alex/desktop/labs/connect4/vga_adapter_multi_objects/object_mem2.v
+    Info (12023): Found entity 1: object_mem2 File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/object_mem2.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alex/desktop/labs/connect4/vga_adapter_multi_objects/object_mem1.v
+    Info (12023): Found entity 1: object_mem1 File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/object_mem1.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alex/desktop/labs/connect4/vga_adapter_multi_objects/vga_adapter/vga_address_translator.v
+    Info (12023): Found entity 1: vga_address_translator File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_address_translator.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alex/desktop/labs/connect4/vga_adapter_multi_objects/vga_adapter/vga_adapter.v
+    Info (12023): Found entity 1: vga_adapter File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_adapter.v Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alex/desktop/labs/connect4/vga_adapter_multi_objects/vga_adapter/vga_controller.v
+    Info (12023): Found entity 1: vga_controller File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_controller.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alex/desktop/labs/connect4/vga_adapter_multi_objects/vga_adapter/vga_pll.v
+    Info (12023): Found entity 1: vga_pll File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_pll.v Line: 36
+Info (12021): Found 4 design units, including 4 entities, in source file /users/alex/desktop/labs/connect4/vga_adapter_multi_objects/vga_demo.v
+    Info (12023): Found entity 1: vga_demo File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 2
+    Info (12023): Found entity 2: regn File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 214
+    Info (12023): Found entity 3: count File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 228
+    Info (12023): Found entity 4: hex7seg File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 241
+Info (12021): Found 4 design units, including 4 entities, in source file /users/alex/desktop/labs/connect4/part1.v
+    Info (12023): Found entity 1: part1 File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 11
+    Info (12023): Found entity 2: register_26bit File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 149
+    Info (12023): Found entity 3: Counter_currCol File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 163
+    Info (12023): Found entity 4: FSM File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 176
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alex/desktop/labs/connect4/altera_up_ps2_data_in.v
+    Info (12023): Found entity 1: Altera_UP_PS2_Data_In File: C:/Users/Alex/Desktop/labs/Connect4/Altera_UP_PS2_Data_In.v Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alex/desktop/labs/connect4/altera_up_ps2_command_out.v
+    Info (12023): Found entity 1: Altera_UP_PS2_Command_Out File: C:/Users/Alex/Desktop/labs/Connect4/Altera_UP_PS2_Command_Out.v Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alex/desktop/labs/connect4/ps2_controller.v
+    Info (12023): Found entity 1: PS2_Controller File: C:/Users/Alex/Desktop/labs/Connect4/PS2_Controller.v Line: 9
 Warning (12125): Using design file connect4.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: Connect4 File: C:/Connect4/Synthesis/connect4.v Line: 6
+    Info (12023): Found entity 1: Connect4 File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 6
 Info (12127): Elaborating entity "Connect4" for the top level hierarchy
-Warning (10034): Output port "DRAM_ADDR" at connect4.v(21) has no driver File: C:/Connect4/Synthesis/connect4.v Line: 21
-Warning (10034): Output port "DRAM_BA" at connect4.v(22) has no driver File: C:/Connect4/Synthesis/connect4.v Line: 22
-Warning (10034): Output port "HEX4" at connect4.v(38) has no driver File: C:/Connect4/Synthesis/connect4.v Line: 38
-Warning (10034): Output port "HEX5" at connect4.v(39) has no driver File: C:/Connect4/Synthesis/connect4.v Line: 39
-Warning (10034): Output port "ADC_CONVST" at connect4.v(9) has no driver File: C:/Connect4/Synthesis/connect4.v Line: 9
-Warning (10034): Output port "ADC_DIN" at connect4.v(10) has no driver File: C:/Connect4/Synthesis/connect4.v Line: 10
-Warning (10034): Output port "ADC_SCLK" at connect4.v(12) has no driver File: C:/Connect4/Synthesis/connect4.v Line: 12
-Warning (10034): Output port "DRAM_CAS_N" at connect4.v(23) has no driver File: C:/Connect4/Synthesis/connect4.v Line: 23
-Warning (10034): Output port "DRAM_CKE" at connect4.v(24) has no driver File: C:/Connect4/Synthesis/connect4.v Line: 24
-Warning (10034): Output port "DRAM_CLK" at connect4.v(25) has no driver File: C:/Connect4/Synthesis/connect4.v Line: 25
-Warning (10034): Output port "DRAM_CS_N" at connect4.v(26) has no driver File: C:/Connect4/Synthesis/connect4.v Line: 26
-Warning (10034): Output port "DRAM_LDQM" at connect4.v(28) has no driver File: C:/Connect4/Synthesis/connect4.v Line: 28
-Warning (10034): Output port "DRAM_RAS_N" at connect4.v(29) has no driver File: C:/Connect4/Synthesis/connect4.v Line: 29
-Warning (10034): Output port "DRAM_UDQM" at connect4.v(30) has no driver File: C:/Connect4/Synthesis/connect4.v Line: 30
-Warning (10034): Output port "DRAM_WE_N" at connect4.v(31) has no driver File: C:/Connect4/Synthesis/connect4.v Line: 31
-Info (12128): Elaborating entity "PS2_Controller" for hierarchy "PS2_Controller:ps2" File: C:/Connect4/Synthesis/connect4.v Line: 104
-Info (12128): Elaborating entity "Altera_UP_PS2_Data_In" for hierarchy "PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In" File: C:/Connect4/PS2_Controller.v Line: 247
-Info (12128): Elaborating entity "Altera_UP_PS2_Command_Out" for hierarchy "PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out" File: C:/Connect4/PS2_Controller.v Line: 267
-Info (12128): Elaborating entity "part1" for hierarchy "part1:U1" File: C:/Connect4/Synthesis/connect4.v Line: 105
-Warning (10036): Verilog HDL or VHDL warning at part1.v(19): object "board" assigned a value but never read File: C:/Connect4/part1.v Line: 19
-Warning (10230): Verilog HDL assignment warning at part1.v(127): truncated value with size 32 to match size of target (3) File: C:/Connect4/part1.v Line: 127
-Warning (10230): Verilog HDL assignment warning at part1.v(132): truncated value with size 32 to match size of target (3) File: C:/Connect4/part1.v Line: 132
-Warning (10240): Verilog HDL Always Construct warning at part1.v(113): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: C:/Connect4/part1.v Line: 113
-Warning (10034): Output port "LEDR[6]" at part1.v(11) has no driver File: C:/Connect4/part1.v Line: 11
-Warning (10034): Output port "LEDR[3]" at part1.v(11) has no driver File: C:/Connect4/part1.v Line: 11
-Info (12128): Elaborating entity "register_26bit" for hierarchy "part1:U1|register_26bit:enabler" File: C:/Connect4/part1.v Line: 34
-Warning (10230): Verilog HDL assignment warning at part1.v(160): truncated value with size 32 to match size of target (26) File: C:/Connect4/part1.v Line: 160
-Info (12128): Elaborating entity "FSM" for hierarchy "part1:U1|FSM:U1" File: C:/Connect4/part1.v Line: 98
-Info (12128): Elaborating entity "Counter_currCol" for hierarchy "part1:U1|Counter_currCol:U2" File: C:/Connect4/part1.v Line: 105
-Warning (10230): Verilog HDL assignment warning at part1.v(169): truncated value with size 32 to match size of target (3) File: C:/Connect4/part1.v Line: 169
-Warning (10230): Verilog HDL assignment warning at part1.v(171): truncated value with size 32 to match size of target (3) File: C:/Connect4/part1.v Line: 171
-Info (12128): Elaborating entity "vga_demo" for hierarchy "part1:U1|vga_demo:VGA_MOD" File: C:/Connect4/part1.v Line: 144
-Warning (10230): Verilog HDL assignment warning at vga_demo.v(65): truncated value with size 32 to match size of target (7) File: C:/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 65
-Warning (10230): Verilog HDL assignment warning at vga_demo.v(66): truncated value with size 32 to match size of target (7) File: C:/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 66
-Warning (10230): Verilog HDL assignment warning at vga_demo.v(67): truncated value with size 32 to match size of target (7) File: C:/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 67
-Warning (10230): Verilog HDL assignment warning at vga_demo.v(68): truncated value with size 32 to match size of target (7) File: C:/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 68
-Warning (10230): Verilog HDL assignment warning at vga_demo.v(69): truncated value with size 32 to match size of target (7) File: C:/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 69
-Warning (10230): Verilog HDL assignment warning at vga_demo.v(70): truncated value with size 32 to match size of target (7) File: C:/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 70
-Warning (10230): Verilog HDL assignment warning at vga_demo.v(71): truncated value with size 32 to match size of target (7) File: C:/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 71
-Warning (10230): Verilog HDL assignment warning at vga_demo.v(75): truncated value with size 32 to match size of target (8) File: C:/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 75
-Info (12128): Elaborating entity "regn" for hierarchy "part1:U1|vga_demo:VGA_MOD|regn:U1" File: C:/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 80
-Info (12128): Elaborating entity "regn" for hierarchy "part1:U1|vga_demo:VGA_MOD|regn:U2" File: C:/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 82
-Info (12128): Elaborating entity "count" for hierarchy "part1:U1|vga_demo:VGA_MOD|count:U3" File: C:/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 86
-Warning (10230): Verilog HDL assignment warning at vga_demo.v(176): truncated value with size 32 to match size of target (3) File: C:/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 176
-Info (12128): Elaborating entity "regn" for hierarchy "part1:U1|vga_demo:VGA_MOD|regn:U5" File: C:/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 89
-Info (12128): Elaborating entity "hex7seg" for hierarchy "part1:U1|vga_demo:VGA_MOD|hex7seg:H3" File: C:/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 95
-Info (12128): Elaborating entity "object_mem1" for hierarchy "part1:U1|vga_demo:VGA_MOD|object_mem1:U6_object1" File: C:/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 108
-Info (12128): Elaborating entity "altsyncram" for hierarchy "part1:U1|vga_demo:VGA_MOD|object_mem1:U6_object1|altsyncram:altsyncram_component" File: C:/Connect4/VGA_adapter_multi_objects/object_mem1.v Line: 81
-Info (12130): Elaborated megafunction instantiation "part1:U1|vga_demo:VGA_MOD|object_mem1:U6_object1|altsyncram:altsyncram_component" File: C:/Connect4/VGA_adapter_multi_objects/object_mem1.v Line: 81
-Info (12133): Instantiated megafunction "part1:U1|vga_demo:VGA_MOD|object_mem1:U6_object1|altsyncram:altsyncram_component" with the following parameter: File: C:/Connect4/VGA_adapter_multi_objects/object_mem1.v Line: 81
+Warning (10034): Output port "DRAM_ADDR" at connect4.v(21) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 21
+Warning (10034): Output port "DRAM_BA" at connect4.v(22) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 22
+Warning (10034): Output port "HEX4" at connect4.v(38) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 38
+Warning (10034): Output port "HEX5" at connect4.v(39) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 39
+Warning (10034): Output port "ADC_CONVST" at connect4.v(9) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 9
+Warning (10034): Output port "ADC_DIN" at connect4.v(10) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 10
+Warning (10034): Output port "ADC_SCLK" at connect4.v(12) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 12
+Warning (10034): Output port "DRAM_CAS_N" at connect4.v(23) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 23
+Warning (10034): Output port "DRAM_CKE" at connect4.v(24) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 24
+Warning (10034): Output port "DRAM_CLK" at connect4.v(25) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 25
+Warning (10034): Output port "DRAM_CS_N" at connect4.v(26) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 26
+Warning (10034): Output port "DRAM_LDQM" at connect4.v(28) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 28
+Warning (10034): Output port "DRAM_RAS_N" at connect4.v(29) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 29
+Warning (10034): Output port "DRAM_UDQM" at connect4.v(30) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 30
+Warning (10034): Output port "DRAM_WE_N" at connect4.v(31) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 31
+Info (12128): Elaborating entity "PS2_Controller" for hierarchy "PS2_Controller:ps2" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 104
+Info (12128): Elaborating entity "Altera_UP_PS2_Data_In" for hierarchy "PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In" File: C:/Users/Alex/Desktop/labs/Connect4/PS2_Controller.v Line: 247
+Info (12128): Elaborating entity "Altera_UP_PS2_Command_Out" for hierarchy "PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out" File: C:/Users/Alex/Desktop/labs/Connect4/PS2_Controller.v Line: 267
+Info (12128): Elaborating entity "part1" for hierarchy "part1:U1" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 105
+Warning (10230): Verilog HDL assignment warning at part1.v(122): truncated value with size 32 to match size of target (3) File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 122
+Warning (10230): Verilog HDL assignment warning at part1.v(127): truncated value with size 32 to match size of target (3) File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 127
+Warning (10240): Verilog HDL Always Construct warning at part1.v(108): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 108
+Warning (10034): Output port "LEDR[6]" at part1.v(11) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 11
+Warning (10034): Output port "LEDR[3]" at part1.v(11) has no driver File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 11
+Info (12128): Elaborating entity "register_26bit" for hierarchy "part1:U1|register_26bit:enabler" File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 34
+Warning (10230): Verilog HDL assignment warning at part1.v(160): truncated value with size 32 to match size of target (26) File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 160
+Info (12128): Elaborating entity "FSM" for hierarchy "part1:U1|FSM:U1" File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 93
+Info (12128): Elaborating entity "Counter_currCol" for hierarchy "part1:U1|Counter_currCol:U2" File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 100
+Warning (10230): Verilog HDL assignment warning at part1.v(169): truncated value with size 32 to match size of target (3) File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 169
+Warning (10230): Verilog HDL assignment warning at part1.v(171): truncated value with size 32 to match size of target (3) File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 171
+Info (12128): Elaborating entity "vga_demo" for hierarchy "part1:U1|vga_demo:VGA_MOD" File: C:/Users/Alex/Desktop/labs/Connect4/part1.v Line: 144
+Warning (10230): Verilog HDL assignment warning at vga_demo.v(113): truncated value with size 32 to match size of target (3) File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 113
+Warning (10230): Verilog HDL assignment warning at vga_demo.v(114): truncated value with size 32 to match size of target (3) File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 114
+Warning (10230): Verilog HDL assignment warning at vga_demo.v(120): truncated value with size 32 to match size of target (8) File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 120
+Warning (10230): Verilog HDL assignment warning at vga_demo.v(121): truncated value with size 32 to match size of target (7) File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 121
+Warning (10230): Verilog HDL assignment warning at vga_demo.v(130): truncated value with size 32 to match size of target (16) File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 130
+Info (12128): Elaborating entity "regn" for hierarchy "part1:U1|vga_demo:VGA_MOD|regn:U1" File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 141
+Info (12128): Elaborating entity "regn" for hierarchy "part1:U1|vga_demo:VGA_MOD|regn:U2" File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 143
+Info (12128): Elaborating entity "count" for hierarchy "part1:U1|vga_demo:VGA_MOD|count:U3" File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 147
+Warning (10230): Verilog HDL assignment warning at vga_demo.v(237): truncated value with size 32 to match size of target (3) File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 237
+Info (12128): Elaborating entity "regn" for hierarchy "part1:U1|vga_demo:VGA_MOD|regn:U5" File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 150
+Info (12128): Elaborating entity "hex7seg" for hierarchy "part1:U1|vga_demo:VGA_MOD|hex7seg:H3" File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 156
+Info (12128): Elaborating entity "object_mem1" for hierarchy "part1:U1|vga_demo:VGA_MOD|object_mem1:U6_object1" File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 169
+Info (12128): Elaborating entity "altsyncram" for hierarchy "part1:U1|vga_demo:VGA_MOD|object_mem1:U6_object1|altsyncram:altsyncram_component" File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/object_mem1.v Line: 81
+Info (12130): Elaborated megafunction instantiation "part1:U1|vga_demo:VGA_MOD|object_mem1:U6_object1|altsyncram:altsyncram_component" File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/object_mem1.v Line: 81
+Info (12133): Instantiated megafunction "part1:U1|vga_demo:VGA_MOD|object_mem1:U6_object1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/object_mem1.v Line: 81
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1547,12 +1541,12 @@ Info (12133): Instantiated megafunction "part1:U1|vga_demo:VGA_MOD|object_mem1:U
     Info (12134): Parameter "width_a" = "3"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hhg1.tdf
-    Info (12023): Found entity 1: altsyncram_hhg1 File: C:/Connect4/Synthesis/db/altsyncram_hhg1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_hhg1" for hierarchy "part1:U1|vga_demo:VGA_MOD|object_mem1:U6_object1|altsyncram:altsyncram_component|altsyncram_hhg1:auto_generated" File: c:/intelfpga/quartus_lite_v23.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "object_mem2" for hierarchy "part1:U1|vga_demo:VGA_MOD|object_mem2:U6_object2" File: C:/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 115
-Info (12128): Elaborating entity "altsyncram" for hierarchy "part1:U1|vga_demo:VGA_MOD|object_mem2:U6_object2|altsyncram:altsyncram_component" File: C:/Connect4/VGA_adapter_multi_objects/object_mem2.v Line: 81
-Info (12130): Elaborated megafunction instantiation "part1:U1|vga_demo:VGA_MOD|object_mem2:U6_object2|altsyncram:altsyncram_component" File: C:/Connect4/VGA_adapter_multi_objects/object_mem2.v Line: 81
-Info (12133): Instantiated megafunction "part1:U1|vga_demo:VGA_MOD|object_mem2:U6_object2|altsyncram:altsyncram_component" with the following parameter: File: C:/Connect4/VGA_adapter_multi_objects/object_mem2.v Line: 81
+    Info (12023): Found entity 1: altsyncram_hhg1 File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/db/altsyncram_hhg1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_hhg1" for hierarchy "part1:U1|vga_demo:VGA_MOD|object_mem1:U6_object1|altsyncram:altsyncram_component|altsyncram_hhg1:auto_generated" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "object_mem2" for hierarchy "part1:U1|vga_demo:VGA_MOD|object_mem2:U6_object2" File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 176
+Info (12128): Elaborating entity "altsyncram" for hierarchy "part1:U1|vga_demo:VGA_MOD|object_mem2:U6_object2|altsyncram:altsyncram_component" File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/object_mem2.v Line: 81
+Info (12130): Elaborated megafunction instantiation "part1:U1|vga_demo:VGA_MOD|object_mem2:U6_object2|altsyncram:altsyncram_component" File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/object_mem2.v Line: 81
+Info (12133): Instantiated megafunction "part1:U1|vga_demo:VGA_MOD|object_mem2:U6_object2|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/object_mem2.v Line: 81
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1568,13 +1562,13 @@ Info (12133): Instantiated megafunction "part1:U1|vga_demo:VGA_MOD|object_mem2:U
     Info (12134): Parameter "width_a" = "3"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ihg1.tdf
-    Info (12023): Found entity 1: altsyncram_ihg1 File: C:/Connect4/Synthesis/db/altsyncram_ihg1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_ihg1" for hierarchy "part1:U1|vga_demo:VGA_MOD|object_mem2:U6_object2|altsyncram:altsyncram_component|altsyncram_ihg1:auto_generated" File: c:/intelfpga/quartus_lite_v23.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "vga_adapter" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA" File: C:/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 144
-Info (12128): Elaborating entity "vga_address_translator" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_address_translator:user_input_translator" File: C:/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_adapter.v Line: 157
-Info (12128): Elaborating entity "altsyncram" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|altsyncram:VideoMemory" File: C:/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_adapter.v Line: 178
-Info (12130): Elaborated megafunction instantiation "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|altsyncram:VideoMemory" File: C:/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_adapter.v Line: 178
-Info (12133): Instantiated megafunction "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|altsyncram:VideoMemory" with the following parameter: File: C:/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_adapter.v Line: 178
+    Info (12023): Found entity 1: altsyncram_ihg1 File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/db/altsyncram_ihg1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_ihg1" for hierarchy "part1:U1|vga_demo:VGA_MOD|object_mem2:U6_object2|altsyncram:altsyncram_component|altsyncram_ihg1:auto_generated" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "vga_adapter" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA" File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_demo.v Line: 205
+Info (12128): Elaborating entity "vga_address_translator" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_address_translator:user_input_translator" File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_adapter.v Line: 157
+Info (12128): Elaborating entity "altsyncram" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|altsyncram:VideoMemory" File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_adapter.v Line: 178
+Info (12130): Elaborated megafunction instantiation "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|altsyncram:VideoMemory" File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_adapter.v Line: 178
+Info (12133): Instantiated megafunction "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|altsyncram:VideoMemory" with the following parameter: File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_adapter.v Line: 178
     Info (12134): Parameter "width_a" = "3"
     Info (12134): Parameter "width_b" = "3"
     Info (12134): Parameter "intended_device_family" = "Cyclone II"
@@ -1591,21 +1585,21 @@ Info (12133): Instantiated megafunction "part1:U1|vga_demo:VGA_MOD|vga_adapter:V
     Info (12134): Parameter "power_up_uninitialized" = "FALSE"
     Info (12134): Parameter "init_file" = "image.colour.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_usm1.tdf
-    Info (12023): Found entity 1: altsyncram_usm1 File: C:/Connect4/Synthesis/db/altsyncram_usm1.tdf Line: 34
-Info (12128): Elaborating entity "altsyncram_usm1" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_usm1:auto_generated" File: c:/intelfpga/quartus_lite_v23.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+    Info (12023): Found entity 1: altsyncram_usm1 File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/db/altsyncram_usm1.tdf Line: 34
+Info (12128): Elaborating entity "altsyncram_usm1" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_usm1:auto_generated" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_7la.tdf
-    Info (12023): Found entity 1: decode_7la File: C:/Connect4/Synthesis/db/decode_7la.tdf Line: 23
-Info (12128): Elaborating entity "decode_7la" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_usm1:auto_generated|decode_7la:decode2" File: C:/Connect4/Synthesis/db/altsyncram_usm1.tdf Line: 47
+    Info (12023): Found entity 1: decode_7la File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/db/decode_7la.tdf Line: 23
+Info (12128): Elaborating entity "decode_7la" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_usm1:auto_generated|decode_7la:decode2" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/db/altsyncram_usm1.tdf Line: 47
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_01a.tdf
-    Info (12023): Found entity 1: decode_01a File: C:/Connect4/Synthesis/db/decode_01a.tdf Line: 23
-Info (12128): Elaborating entity "decode_01a" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_usm1:auto_generated|decode_01a:rden_decode_b" File: C:/Connect4/Synthesis/db/altsyncram_usm1.tdf Line: 48
+    Info (12023): Found entity 1: decode_01a File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/db/decode_01a.tdf Line: 23
+Info (12128): Elaborating entity "decode_01a" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_usm1:auto_generated|decode_01a:rden_decode_b" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/db/altsyncram_usm1.tdf Line: 48
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_ifb.tdf
-    Info (12023): Found entity 1: mux_ifb File: C:/Connect4/Synthesis/db/mux_ifb.tdf Line: 23
-Info (12128): Elaborating entity "mux_ifb" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_usm1:auto_generated|mux_ifb:mux3" File: C:/Connect4/Synthesis/db/altsyncram_usm1.tdf Line: 50
-Info (12128): Elaborating entity "vga_pll" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_pll:mypll" File: C:/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_adapter.v Line: 201
-Info (12128): Elaborating entity "altpll" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: C:/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_pll.v Line: 53
-Info (12130): Elaborated megafunction instantiation "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: C:/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_pll.v Line: 53
-Info (12133): Instantiated megafunction "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" with the following parameter: File: C:/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_pll.v Line: 53
+    Info (12023): Found entity 1: mux_ifb File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/db/mux_ifb.tdf Line: 23
+Info (12128): Elaborating entity "mux_ifb" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_usm1:auto_generated|mux_ifb:mux3" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/db/altsyncram_usm1.tdf Line: 50
+Info (12128): Elaborating entity "vga_pll" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_pll:mypll" File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_adapter.v Line: 201
+Info (12128): Elaborating entity "altpll" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_pll.v Line: 53
+Info (12130): Elaborated megafunction instantiation "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_pll.v Line: 53
+Info (12133): Instantiated megafunction "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" with the following parameter: File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_pll.v Line: 53
     Info (12134): Parameter "operation_mode" = "NORMAL"
     Info (12134): Parameter "intended_device_family" = "Cyclone II"
     Info (12134): Parameter "lpm_type" = "altpll"
@@ -1618,115 +1612,114 @@ Info (12133): Instantiated megafunction "part1:U1|vga_demo:VGA_MOD|vga_adapter:V
     Info (12134): Parameter "clk0_multiply_by" = "1"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altpll_80u.tdf
-    Info (12023): Found entity 1: altpll_80u File: C:/Connect4/Synthesis/db/altpll_80u.tdf Line: 26
-Info (12128): Elaborating entity "altpll_80u" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated" File: c:/intelfpga/quartus_lite_v23.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "vga_controller" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_controller:controller" File: C:/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_adapter.v Line: 216
+    Info (12023): Found entity 1: altpll_80u File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/db/altpll_80u.tdf Line: 26
+Info (12128): Elaborating entity "altpll_80u" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altpll.tdf Line: 898
+Info (12128): Elaborating entity "vga_controller" for hierarchy "part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_controller:controller" File: C:/Users/Alex/Desktop/labs/Connect4/VGA_adapter_multi_objects/vga_adapter/vga_adapter.v Line: 216
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: C:/Connect4/Synthesis/connect4.v Line: 27
-    Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: C:/Connect4/Synthesis/connect4.v Line: 27
-    Warning (13040): bidirectional pin "DRAM_DQ[2]" has no driver File: C:/Connect4/Synthesis/connect4.v Line: 27
-    Warning (13040): bidirectional pin "DRAM_DQ[3]" has no driver File: C:/Connect4/Synthesis/connect4.v Line: 27
-    Warning (13040): bidirectional pin "DRAM_DQ[4]" has no driver File: C:/Connect4/Synthesis/connect4.v Line: 27
-    Warning (13040): bidirectional pin "DRAM_DQ[5]" has no driver File: C:/Connect4/Synthesis/connect4.v Line: 27
-    Warning (13040): bidirectional pin "DRAM_DQ[6]" has no driver File: C:/Connect4/Synthesis/connect4.v Line: 27
-    Warning (13040): bidirectional pin "DRAM_DQ[7]" has no driver File: C:/Connect4/Synthesis/connect4.v Line: 27
-    Warning (13040): bidirectional pin "DRAM_DQ[8]" has no driver File: C:/Connect4/Synthesis/connect4.v Line: 27
-    Warning (13040): bidirectional pin "DRAM_DQ[9]" has no driver File: C:/Connect4/Synthesis/connect4.v Line: 27
-    Warning (13040): bidirectional pin "DRAM_DQ[10]" has no driver File: C:/Connect4/Synthesis/connect4.v Line: 27
-    Warning (13040): bidirectional pin "DRAM_DQ[11]" has no driver File: C:/Connect4/Synthesis/connect4.v Line: 27
-    Warning (13040): bidirectional pin "DRAM_DQ[12]" has no driver File: C:/Connect4/Synthesis/connect4.v Line: 27
-    Warning (13040): bidirectional pin "DRAM_DQ[13]" has no driver File: C:/Connect4/Synthesis/connect4.v Line: 27
-    Warning (13040): bidirectional pin "DRAM_DQ[14]" has no driver File: C:/Connect4/Synthesis/connect4.v Line: 27
-    Warning (13040): bidirectional pin "DRAM_DQ[15]" has no driver File: C:/Connect4/Synthesis/connect4.v Line: 27
-    Warning (13040): bidirectional pin "PS2_CLK2" has no driver File: C:/Connect4/Synthesis/connect4.v Line: 49
-    Warning (13040): bidirectional pin "PS2_DAT2" has no driver File: C:/Connect4/Synthesis/connect4.v Line: 51
+    Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 27
+    Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 27
+    Warning (13040): bidirectional pin "DRAM_DQ[2]" has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 27
+    Warning (13040): bidirectional pin "DRAM_DQ[3]" has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 27
+    Warning (13040): bidirectional pin "DRAM_DQ[4]" has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 27
+    Warning (13040): bidirectional pin "DRAM_DQ[5]" has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 27
+    Warning (13040): bidirectional pin "DRAM_DQ[6]" has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 27
+    Warning (13040): bidirectional pin "DRAM_DQ[7]" has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 27
+    Warning (13040): bidirectional pin "DRAM_DQ[8]" has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 27
+    Warning (13040): bidirectional pin "DRAM_DQ[9]" has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 27
+    Warning (13040): bidirectional pin "DRAM_DQ[10]" has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 27
+    Warning (13040): bidirectional pin "DRAM_DQ[11]" has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 27
+    Warning (13040): bidirectional pin "DRAM_DQ[12]" has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 27
+    Warning (13040): bidirectional pin "DRAM_DQ[13]" has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 27
+    Warning (13040): bidirectional pin "DRAM_DQ[14]" has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 27
+    Warning (13040): bidirectional pin "DRAM_DQ[15]" has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 27
+    Warning (13040): bidirectional pin "PS2_CLK2" has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 49
+    Warning (13040): bidirectional pin "PS2_DAT2" has no driver File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 51
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "ADC_CONVST" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 9
-    Warning (13410): Pin "ADC_DIN" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 10
-    Warning (13410): Pin "ADC_SCLK" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 12
-    Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 21
-    Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 21
-    Warning (13410): Pin "DRAM_ADDR[2]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 21
-    Warning (13410): Pin "DRAM_ADDR[3]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 21
-    Warning (13410): Pin "DRAM_ADDR[4]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 21
-    Warning (13410): Pin "DRAM_ADDR[5]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 21
-    Warning (13410): Pin "DRAM_ADDR[6]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 21
-    Warning (13410): Pin "DRAM_ADDR[7]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 21
-    Warning (13410): Pin "DRAM_ADDR[8]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 21
-    Warning (13410): Pin "DRAM_ADDR[9]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 21
-    Warning (13410): Pin "DRAM_ADDR[10]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 21
-    Warning (13410): Pin "DRAM_ADDR[11]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 21
-    Warning (13410): Pin "DRAM_ADDR[12]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 21
-    Warning (13410): Pin "DRAM_BA[0]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 22
-    Warning (13410): Pin "DRAM_BA[1]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 22
-    Warning (13410): Pin "DRAM_CAS_N" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 23
-    Warning (13410): Pin "DRAM_CKE" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 24
-    Warning (13410): Pin "DRAM_CLK" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 25
-    Warning (13410): Pin "DRAM_CS_N" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 26
-    Warning (13410): Pin "DRAM_LDQM" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 28
-    Warning (13410): Pin "DRAM_RAS_N" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 29
-    Warning (13410): Pin "DRAM_UDQM" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 30
-    Warning (13410): Pin "DRAM_WE_N" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 31
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 38
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 38
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 38
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 38
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 38
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 38
-    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 38
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 39
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 39
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 39
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 39
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 39
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 39
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 39
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 45
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Connect4/Synthesis/connect4.v Line: 45
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: C:/Connect4/Synthesis/connect4.v Line: 63
+    Warning (13410): Pin "ADC_CONVST" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 9
+    Warning (13410): Pin "ADC_DIN" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 10
+    Warning (13410): Pin "ADC_SCLK" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 12
+    Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 21
+    Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 21
+    Warning (13410): Pin "DRAM_ADDR[2]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 21
+    Warning (13410): Pin "DRAM_ADDR[3]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 21
+    Warning (13410): Pin "DRAM_ADDR[4]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 21
+    Warning (13410): Pin "DRAM_ADDR[5]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 21
+    Warning (13410): Pin "DRAM_ADDR[6]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 21
+    Warning (13410): Pin "DRAM_ADDR[7]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 21
+    Warning (13410): Pin "DRAM_ADDR[8]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 21
+    Warning (13410): Pin "DRAM_ADDR[9]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 21
+    Warning (13410): Pin "DRAM_ADDR[10]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 21
+    Warning (13410): Pin "DRAM_ADDR[11]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 21
+    Warning (13410): Pin "DRAM_ADDR[12]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 21
+    Warning (13410): Pin "DRAM_BA[0]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 22
+    Warning (13410): Pin "DRAM_BA[1]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 22
+    Warning (13410): Pin "DRAM_CAS_N" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 23
+    Warning (13410): Pin "DRAM_CKE" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 24
+    Warning (13410): Pin "DRAM_CLK" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 25
+    Warning (13410): Pin "DRAM_CS_N" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 26
+    Warning (13410): Pin "DRAM_LDQM" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 28
+    Warning (13410): Pin "DRAM_RAS_N" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 29
+    Warning (13410): Pin "DRAM_UDQM" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 30
+    Warning (13410): Pin "DRAM_WE_N" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 31
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 38
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 38
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 38
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 38
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 38
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 38
+    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 38
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 39
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 39
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 39
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 39
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 39
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 39
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 39
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 45
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 45
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 63
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 19 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Connect4/Synthesis/Connect4.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/Alex/Desktop/labs/Connect4/Synthesis/Connect4.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning: RST port on the PLL is not properly connected on instance part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: C:/Connect4/Synthesis/db/altpll_80u.tdf Line: 34
+Warning: RST port on the PLL is not properly connected on instance part1:U1|vga_demo:VGA_MOD|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/db/altpll_80u.tdf Line: 34
     Info: Must be connected
 Warning (21074): Design contains 16 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "ADC_DOUT" File: C:/Connect4/Synthesis/connect4.v Line: 11
-    Warning (15610): No output dependent on input pin "CLOCK2_50" File: C:/Connect4/Synthesis/connect4.v Line: 15
-    Warning (15610): No output dependent on input pin "CLOCK3_50" File: C:/Connect4/Synthesis/connect4.v Line: 16
-    Warning (15610): No output dependent on input pin "CLOCK4_50" File: C:/Connect4/Synthesis/connect4.v Line: 17
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Connect4/Synthesis/connect4.v Line: 42
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Connect4/Synthesis/connect4.v Line: 42
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Connect4/Synthesis/connect4.v Line: 54
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Connect4/Synthesis/connect4.v Line: 54
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Connect4/Synthesis/connect4.v Line: 54
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Connect4/Synthesis/connect4.v Line: 54
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Connect4/Synthesis/connect4.v Line: 54
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Connect4/Synthesis/connect4.v Line: 54
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Connect4/Synthesis/connect4.v Line: 54
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Connect4/Synthesis/connect4.v Line: 54
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Connect4/Synthesis/connect4.v Line: 54
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Connect4/Synthesis/connect4.v Line: 54
-Info (21057): Implemented 556 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "ADC_DOUT" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 11
+    Warning (15610): No output dependent on input pin "CLOCK2_50" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 15
+    Warning (15610): No output dependent on input pin "CLOCK3_50" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 16
+    Warning (15610): No output dependent on input pin "CLOCK4_50" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 17
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 42
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 42
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 54
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 54
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 54
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 54
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 54
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 54
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 54
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 54
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 54
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Alex/Desktop/labs/Connect4/Synthesis/connect4.v Line: 54
+Info (21057): Implemented 1091 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 107 output pins
     Info (21060): Implemented 20 bidirectional pins
-    Info (21061): Implemented 386 logic cells
+    Info (21061): Implemented 929 logic cells
     Info (21064): Implemented 15 RAM segments
     Info (21065): Implemented 1 PLLs
-    Info (21062): Implemented 8 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 118 warnings
-    Info: Peak virtual memory: 4886 megabytes
-    Info: Processing ended: Fri Nov 22 20:36:09 2024
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:11
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 113 warnings
+    Info: Peak virtual memory: 4881 megabytes
+    Info: Processing ended: Sat Nov 23 16:41:01 2024
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:09
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Connect4/Synthesis/Connect4.map.smsg.
+The suppressed messages can be found in C:/Users/Alex/Desktop/labs/Connect4/Synthesis/Connect4.map.smsg.
 
 

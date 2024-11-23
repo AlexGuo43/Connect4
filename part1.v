@@ -35,8 +35,6 @@ module part1(input [9:0] SW, input CLOCK_50, input [3:0] KEY, output [6:0] HEX3,
     assign HSecEn = ~(|Q[25:0]);
 	 
 	 reg released_key;
-	 reg space_go;
-	 assign go = released_key && space_go;
     //Setting up game logic FSM
     // wire right, left, place; //for no ps2 keyboard
     reg right, left, place;
@@ -45,11 +43,9 @@ module part1(input [9:0] SW, input CLOCK_50, input [3:0] KEY, output [6:0] HEX3,
             right <= 0;
             left <= 0;
             place <= 0;
-				released_key<=0;
-				space_go<=0;
+			released_key<=0;
         end 
 		  else begin
-				if(received_data==8'h29) space_go <=1;
 				if(received_data==8'hF0) begin
 					released_key<=1;
 					right<=0;
@@ -69,7 +65,6 @@ module part1(input [9:0] SW, input CLOCK_50, input [3:0] KEY, output [6:0] HEX3,
 						 8'h29: begin
 								  place <= 1;  // Spacebar
 								  released_key<=0;
-								  space_go<=0;
 						 end
 						 default: begin
 							  right <= 0;
@@ -141,7 +136,12 @@ module part1(input [9:0] SW, input CLOCK_50, input [3:0] KEY, output [6:0] HEX3,
 	 assign LEDR[2] = received_data_en;
 	 
 	 // VGA - need to pass released_key to give earliest signal to give VGA drawer enough time
-	 vga_demo VGA_MOD (CLOCK_50, SW[9:0], KEY[3:0], P1_turn, P2_turn, go, currCol, colCount[0], colCount[1], colCount[2], colCount[3], colCount[4], colCount[5], colCount[6], HEX3, HEX2, HEX1, HEX0, VGA_R, VGA_G, VGA_B, VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N, VGA_CLK);
+	 vga_demo VGA_MOD (CLOCK_50, SW[9:0], KEY[3:0], Resetn, board[0], board[1], board[2], board[3], board[4], board[5], board[6],
+        board[7], board[8], board[9], board[10], board[11], board[12], board[13],
+        board[14], board[15], board[16], board[17], board[18], board[19], board[20],
+        board[21], board[22], board[23], board[24], board[25], board[26], board[27],
+        board[28], board[29], board[30], board[31], board[32], board[33], board[34],
+        board[35], board[36], board[37], board[38], board[39], board[40], board[41], HEX3, HEX2, HEX1, HEX0, VGA_R, VGA_G, VGA_B, VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N, VGA_CLK);
 
     //calc_win module -- full code
 endmodule
