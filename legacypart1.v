@@ -58,14 +58,17 @@ module legacypart1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, output [9:0]
     // Counter_currCol module
     wire [2:0] currCol;
     Counter_currCol U2(shiftR, shiftL, HSecEn, CLOCK_50, Resetn, currCol[2:0]); //Clocked by HSecEn to stop going right too quickly
-    //assign LEDR[9:7] = currCol;
+    assign LEDR[9:7] = currCol;
 
 
     // Counter_colCount module -- full code since you can't pass multi-dimensional arrays...
     // Also handles all actions of place command, (actions only happen once signalled by checkwin1/2)
     reg [2:0] colCount [0:6]; //track number of pieces in each col
 
-    assign LEDR[9:7] = colCount[3];
+    //assign LEDR[9:7] = colCount[3];
+    parameter BOARD_WIDTH = 7;
+    parameter BOARD_HEIGHT = 6;
+    integer row, count;
     always @(posedge CLOCK_50 or negedge Resetn) begin
         if(!Resetn) begin // initialize all elements of the board
             for (i = 0; i < 42; i = i + 1) begin
@@ -76,15 +79,142 @@ module legacypart1(input [2:0] SW, input CLOCK_50, input [1:0] KEY, output [9:0]
             for (i = 0; i < 7; i = i + 1) begin
                 colCount[i] = 3'b000;
             end
+            win<=0;
         end
         else if(checkwin1 && colCount[currCol]<3'b110) begin
             validMove1<=1;
-            board[(5-colCount[currCol])*7+currCol] <= p1;
+            row = 5-colCount[currCol];
+            board[row*7+currCol] <= p1; // place token
+            //Horizontal check
+            count=1;
+            if(currCol>0 && board[row*7+currCol-1]==p1)begin
+                count = count+1;
+                if(currCol>1 && board[row*7+currCol-2]==p1)begin
+                    count = count+1;
+                    if(currCol>2 && board[row*7+currCol-3]==p1) count = count+1;
+                end
+            end
+            if(currCol<BOARD_WIDTH-1 && board[row*7+currCol+1]==p1)begin
+                count = count+1;
+                if(currCol<BOARD_WIDTH-2 && board[row*7+currCol+2]==p1)begin
+                    count = count+1;
+                    if(currCol<BOARD_WIDTH-3 && board[row*7+currCol+3]==p1) count = count+1;
+                end
+            end
+            if(count>=4) win<=1;
+            //Vertical check
+            count =1;
+            if (row < BOARD_HEIGHT-1 && board[(row+1)*7+currCol] == p1) begin
+                count = count + 1;
+                if (row < BOARD_HEIGHT-2 && board[(row+2)*7+currCol] == p1) begin
+                    count = count + 1;
+                    if (row < BOARD_HEIGHT-3 && board[(row+3)*7+currCol] == p1) count = count + 1;
+                end
+            end
+            if (count >= 4) win <= 1;
+            //Diagonal bottom left to top right check
+            count = 1;
+            if (row > 0 && currCol < BOARD_WIDTH-1 && board[(row-1)*7+currCol+1] == p1) begin
+                count = count + 1;
+                if (row > 1 && currCol < BOARD_WIDTH-2 && board[(row-2)*7+currCol+2] == p1) begin
+                    count = count + 1;
+                    if (row > 2 && currCol < BOARD_WIDTH-3 && board[(row-3)*7+currCol+3] == p1) count = count + 1;
+                end
+            end
+            if (row < BOARD_HEIGHT-1 && currCol > 0 && board[(row+1)*7+currCol-1] == p1) begin
+                count = count + 1;
+                if (row < BOARD_HEIGHT-2 && currCol > 1 && board[(row+2)*7+currCol-2] == p1) begin
+                    count = count + 1;
+                    if (row < BOARD_HEIGHT-3 && currCol > 2 && board[(row+3)*7+currCol-3] == p1) count = count + 1;
+                end
+            end
+            if (count >= 4) win <= 1;
+            //Diagonal top left to bottom right check
+            count = 1;
+            if (row < BOARD_HEIGHT-1 && currCol < BOARD_WIDTH-1 && board[(row+1)*7+currCol+1] == p1) begin
+                count = count + 1;
+                if (row < BOARD_HEIGHT-2 && currCol < BOARD_WIDTH-2 && board[(row+2)*7+currCol+2] == p1) begin
+                    count = count + 1;
+                    if (row < BOARD_HEIGHT-3 && currCol < BOARD_WIDTH-3 && board[(row+3)*7+currCol+3] == p1) count = count + 1;
+                end
+            end
+            if (row > 0 && currCol > 0 && board[(row-1)*7+currCol-1] == p1) begin
+                count = count + 1;
+                if (row > 1 && currCol > 1 && board[(row-2)*7+currCol-2] == p1) begin
+                    count = count + 1;
+                    if (row > 2 && currCol > 2 && board[(row-3)*7+currCol-3] == p1) count = count + 1;
+                end
+            end
+            if (count >= 4) win <= 1;
+            //Update colCount at the end
             colCount[currCol] <= colCount[currCol]+1;
         end
         else if(checkwin2 && colCount[currCol]<3'b110) begin
             validMove2<=1;
-            board[(5-colCount[currCol])*7+currCol] <= p2;
+            row = 5-colCount[currCol];
+            board[(row)*7+currCol] <= p2;
+            //Horizontal check
+            count=1;
+            if(currCol>0 && board[row*7+currCol-1]==p2)begin
+                count = count+1;
+                if(currCol>1 && board[row*7+currCol-2]==p2)begin
+                    count = count+1;
+                    if(currCol>2 && board[row*7+currCol-3]==p2) count = count+1;
+                end
+            end
+            if(currCol<BOARD_WIDTH-1 && board[row*7+currCol+1]==p2)begin
+                count = count+1;
+                if(currCol<BOARD_WIDTH-2 && board[row*7+currCol+2]==p2)begin
+                    count = count+1;
+                    if(currCol<BOARD_WIDTH-3 && board[row*7+currCol+3]==p2) count = count+1;
+                end
+            end
+            if(count>=4) win<=1;
+            //Vertical check
+            count =1;
+            if (row < BOARD_HEIGHT-1 && board[(row+1)*7+currCol] == p2) begin
+                count = count + 1;
+                if (row < BOARD_HEIGHT-2 && board[(row+2)*7+currCol] == p2) begin
+                    count = count + 1;
+                    if (row < BOARD_HEIGHT-3 && board[(row+3)*7+currCol] == p2) count = count + 1;
+                end
+            end
+            if (count >= 4) win <= 1;
+            //Diagonal bottom left to top right check
+            count = 1;
+            if (row > 0 && currCol < BOARD_WIDTH-1 && board[(row-1)*7+currCol+1] == p2) begin
+                count = count + 1;
+                if (row > 1 && currCol < BOARD_WIDTH-2 && board[(row-2)*7+currCol+2] == p2) begin
+                    count = count + 1;
+                    if (row > 2 && currCol < BOARD_WIDTH-3 && board[(row-3)*7+currCol+3] == p2) count = count + 1;
+                end
+            end
+            if (row < BOARD_HEIGHT-1 && currCol > 0 && board[(row+1)*7+currCol-1] == p2) begin
+                count = count + 1;
+                if (row < BOARD_HEIGHT-2 && currCol > 1 && board[(row+2)*7+currCol-2] == p2) begin
+                    count = count + 1;
+                    if (row < BOARD_HEIGHT-3 && currCol > 2 && board[(row+3)*7+currCol-3] == p2) count = count + 1;
+                end
+            end
+            if (count >= 4) win <= 1;
+            //Diagonal top left to bottom right check
+            count = 1;
+            if (row < BOARD_HEIGHT-1 && currCol < BOARD_WIDTH-1 && board[(row+1)*7+currCol+1] == p2) begin
+                count = count + 1;
+                if (row < BOARD_HEIGHT-2 && currCol < BOARD_WIDTH-2 && board[(row+2)*7+currCol+2] == p2) begin
+                    count = count + 1;
+                    if (row < BOARD_HEIGHT-3 && currCol < BOARD_WIDTH-3 && board[(row+3)*7+currCol+3] == p2) count = count + 1;
+                end
+            end
+            if (row > 0 && currCol > 0 && board[(row-1)*7+currCol-1] == p2) begin
+                count = count + 1;
+                if (row > 1 && currCol > 1 && board[(row-2)*7+currCol-2] == p2) begin
+                    count = count + 1;
+                    if (row > 2 && currCol > 2 && board[(row-3)*7+currCol-3] == p2) count = count + 1;
+                end
+            end
+            if (count >= 4) win <= 1;
+            //Update colCount at the end
             colCount[currCol] <= colCount[currCol]+1;
         end
         else if(checkwin1 && colCount[currCol]>=3'b110) begin
@@ -120,7 +250,7 @@ module Counter_currCol(input shiftR, shiftL, HSecEn, clock, Resetn, output reg [
         if (!Resetn) begin
             currCol <= 3'b011;  // Start in middle column
         end else if (HSecEn) begin
-            if (shiftR && currCol < 3'b111) 
+            if (shiftR && currCol < 3'b110) 
                 currCol <= currCol + 1; // Shift right
             else if (shiftL && currCol > 3'b000) 
                 currCol <= currCol - 1; // Shift left

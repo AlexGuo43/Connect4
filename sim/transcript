@@ -1,11 +1,17 @@
 # vsim -pli "simfpga.vpi" -Lf 220model -Lf altera_mf_ver -Lf verilog -c -do "run -all" tb 
-# Start time: 18:36:53 on Nov 16,2024
+# Start time: 16:18:00 on Nov 24,2024
 # Loading work.tb
 # Loading work.top
-# Loading work.legacypart1
+# Loading work.legpart1
 # Loading work.register_26bit
 # Loading work.FSM
 # Loading work.Counter_currCol
+# ** Warning: (vsim-3017) ../legpart1.v(60): [TFMPC] - Too few port connections. Expected 6, found 4.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/DUT/U1/U2 File: ../part1.v
+# ** Warning: (vsim-3015) ../legpart1.v(60): [PCDPC] - Port size (1) does not match connection size (3) for port 'clock'. The port definition is at: ../part1.v(163).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/DUT/U1/U2 File: ../part1.v
+# ** Warning: (vsim-3722) ../legpart1.v(60): [TFMPC] - Missing connection for port 'Resetn'.
+# ** Warning: (vsim-3722) ../legpart1.v(60): [TFMPC] - Missing connection for port 'currCol'.
 # Loading ./simfpga.vpi
 # run -all
 # Time scaling: 0.0001 sim seconds per real-time second
@@ -13,8 +19,8 @@
 # 
 # Connected to server!
 # ** Note: $finish    : ../tb/tb.v(27)
-#    Time: 61055 us  Iteration: 1  Instance: /tb
+#    Time: 190250 us  Iteration: 1  Instance: /tb
 # 
 # Quitting...
-# End time: 18:37:06 on Nov 16,2024, Elapsed time: 0:00:13
-# Errors: 0, Warnings: 0
+# End time: 16:18:42 on Nov 24,2024, Elapsed time: 0:00:42
+# Errors: 0, Warnings: 4
