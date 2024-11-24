@@ -5,7 +5,7 @@ module vga_demo(
     board_14, board_15, board_16, board_17, board_18, board_19, board_20,
     board_21, board_22, board_23, board_24, board_25, board_26, board_27,
     board_28, board_29, board_30, board_31, board_32, board_33, board_34,
-    board_35, board_36, board_37, board_38, board_39, board_40, board_41, HEX3, HEX2, HEX1, HEX0,
+    board_35, board_36, board_37, board_38, board_39, board_40, board_41,
     VGA_R, VGA_G, VGA_B,
     VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N, VGA_CLK
 );
@@ -20,7 +20,6 @@ module vga_demo(
                 board_21, board_22, board_23, board_24, board_25, board_26, board_27,
                 board_28, board_29, board_30, board_31, board_32, board_33, board_34,
                 board_35, board_36, board_37, board_38, board_39, board_40, board_41;
-    output [6:0] HEX3, HEX2, HEX1, HEX0;
     output [7:0] VGA_R;     // VGA Red color signal
     output [7:0] VGA_G;     // VGA Green color signal
     output [7:0] VGA_B;     // VGA Blue color signal
@@ -152,10 +151,7 @@ module vga_demo(
         defparam U4.n = 3;
     assign Ey = (XC == 3'b111);             // enable YC at the end of each object row
 
-    hex7seg H3 (X[7:4], HEX3);
-    hex7seg H2 (X[3:0], HEX2);
-    hex7seg H1 ({1'b0, Y[6:4]}, HEX1);
-    hex7seg H0 (Y[3:0], HEX0);
+
 
     // Instantiate two object memories
     wire [2:0] color_object1, color_object2;
@@ -236,29 +232,3 @@ module count (Clock, Resetn, E, Q);
             Q <= Q + 1;
 endmodule
 
-// hex7seg module
-module hex7seg (hex, display);
-    input [3:0] hex;
-    output [6:0] display;
-    reg [6:0] display;
-
-    always @ (hex)
-        case (hex)
-            4'h0: display = 7'b1000000;
-            4'h1: display = 7'b1111001;
-            4'h2: display = 7'b0100100;
-            4'h3: display = 7'b0110000;
-            4'h4: display = 7'b0011001;
-            4'h5: display = 7'b0010010;
-            4'h6: display = 7'b0000010;
-            4'h7: display = 7'b1111000;
-            4'h8: display = 7'b0000000;
-            4'h9: display = 7'b0011000;
-            4'hA: display = 7'b0001000;
-            4'hB: display = 7'b0000011;
-            4'hC: display = 7'b1000110;
-            4'hD: display = 7'b0100001;
-            4'hE: display = 7'b0000110;
-            4'hF: display = 7'b0001110;
-        endcase
-endmodule

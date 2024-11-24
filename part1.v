@@ -84,8 +84,7 @@ module part1(input [9:0] SW, input CLOCK_50, input [3:0] KEY, output [6:0] HEX3,
     reg win = 0;
     reg validMove1, validMove2;
 
-    assign LEDR[5] = validMove2;
-    assign LEDR[4] = validMove1;
+
     // assign right = SW[0]; //for no ps2 keyboard
     // assign left = SW[1];
     // assign place = SW[2];
@@ -98,7 +97,7 @@ module part1(input [9:0] SW, input CLOCK_50, input [3:0] KEY, output [6:0] HEX3,
     // Counter_currCol module
     wire [2:0] currCol;
     Counter_currCol U2(shiftR, shiftL, HSecEn, CLOCK_50, Resetn, currCol[2:0]); //Clocked by HSecEn to stop going right too quickly
-    assign LEDR[9:7] = currCol;
+    display_col(currCol, HEX3, HEX2, HEX1, HEX0);
 
     // Counter_colCount module -- full code since you can't pass multi-dimensional arrays...
     // Also handles all actions of place command, (actions only happen once signalled by checkwin1/2)
@@ -263,7 +262,7 @@ module part1(input [9:0] SW, input CLOCK_50, input [3:0] KEY, output [6:0] HEX3,
             validMove2 <= 0;
         end
     end
-	 assign LEDR[2] = received_data_en;
+	 //assign LEDR[2] = received_data_en;
 	 
 	 // VGA - need to pass released_key to give earliest signal to give VGA drawer enough time
 	 vga_demo VGA_MOD (CLOCK_50, SW[9:0], KEY[3:0], Resetn, board[0], board[1], board[2], board[3], board[4], board[5], board[6],
@@ -271,9 +270,9 @@ module part1(input [9:0] SW, input CLOCK_50, input [3:0] KEY, output [6:0] HEX3,
         board[14], board[15], board[16], board[17], board[18], board[19], board[20],
         board[21], board[22], board[23], board[24], board[25], board[26], board[27],
         board[28], board[29], board[30], board[31], board[32], board[33], board[34],
-        board[35], board[36], board[37], board[38], board[39], board[40], board[41], HEX3, HEX2, HEX1, HEX0, VGA_R, VGA_G, VGA_B, VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N, VGA_CLK);
+        board[35], board[36], board[37], board[38], board[39], board[40], board[41], VGA_R, VGA_G, VGA_B, VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N, VGA_CLK);
 
-    //calc_win module -- full code
+    assign LEDR[9] = win;
 endmodule
 
 module register_26bit(Clock, Resetn, Q);
@@ -356,3 +355,33 @@ module FSM(input start, Resetn, right, left, place, win, Clock, validMove1, vali
     assign checkwin2 = (~y[3]&y[2]&~y[1]&y[0]); // check_win2
 endmodule
 
+module display_col(
+    input [2:0] currCol, // 3-bit binary number
+    output [6:0] HEX3,   // Display "C"
+    output [6:0] HEX2,   // Display "O"
+    output [6:0] HEX1,   // Display "L"
+    output reg [6:0] HEX0    // Display decimal value of currCol
+);
+    // "C"
+    assign HEX3 = 7'b1000110;
+    // "O"
+    assign HEX2 = 7'b1000000;
+    // "L"
+    assign HEX1 = 7'b1000111;
+
+    // HEX0: Display decimal value of currCol
+    always @(*) begin
+        case (currCol)
+            3'b000: HEX0 = 7'b1000000; // 0
+            3'b001: HEX0 = 7'b1111001; // 1
+            3'b010: HEX0 = 7'b0100100; // 2
+            3'b011: HEX0 = 7'b0110000; // 3
+            3'b100: HEX0 = 7'b0011001; // 4
+            3'b101: HEX0 = 7'b0010010; // 5
+            3'b110: HEX0 = 7'b0000010; // 6
+            3'b111: HEX0 = 7'b1111000; // 7
+            default: HEX0 = 7'b1111111; // Off state
+        endcase
+    end
+
+endmodule
