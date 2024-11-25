@@ -8,7 +8,7 @@ say Player 1's turn, and LEDR[1] will say it's Player 2's turn.
 Start will be KEY[1] and Resetn will be KEY[0]
 */
 
-module part1(input [9:0] SW, input CLOCK_50, input [3:0] KEY, output [6:0] HEX3, HEX2, HEX1, HEX0, output [7:0] VGA_R, VGA_G, VGA_B, output VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N, VGA_CLK, input [7:0] received_data, input received_data_en, output [9:0] LEDR);
+module part1(input [9:0] SW, input CLOCK_50, input [3:0] KEY, output [6:0] HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, output [7:0] VGA_R, VGA_G, VGA_B, output VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N, VGA_CLK, input [7:0] received_data, input received_data_en, output [9:0] LEDR);
 
     //game board and counters
     wire start, Resetn;
@@ -97,7 +97,7 @@ module part1(input [9:0] SW, input CLOCK_50, input [3:0] KEY, output [6:0] HEX3,
     // Counter_currCol module
     wire [2:0] currCol;
     Counter_currCol U2(shiftR, shiftL, HSecEn, CLOCK_50, Resetn, currCol[2:0]); //Clocked by HSecEn to stop going right too quickly
-    display_col(currCol, HEX3, HEX2, HEX1, HEX0);
+    display_col(currCol, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0);
 
     // Counter_colCount module -- full code since you can't pass multi-dimensional arrays...
     // Also handles all actions of place command, (actions only happen once signalled by checkwin1/2)
@@ -357,11 +357,15 @@ endmodule
 
 module display_col(
     input [2:0] currCol, // 3-bit binary number
-    output [6:0] HEX3,   // Display "C"
-    output [6:0] HEX2,   // Display "O"
-    output [6:0] HEX1,   // Display "L"
+    output [6:0] HEX5,
+    output [6:0] HEX4,
+    output [6:0] HEX3,   
+    output [6:0] HEX2,   
+    output [6:0] HEX1,   
     output reg [6:0] HEX0    // Display decimal value of currCol
 );
+    assign HEX5 = 7'b1111111;
+    assign HEX4 = 7'b1111111;
     // "C"
     assign HEX3 = 7'b1000110;
     // "O"
